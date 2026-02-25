@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grads Paths • Find Mentors Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      if (localStorage.getItem("theme") === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              background: "var(--bg)",
+              surface: "var(--surface)",
+              primary: "var(--primary)",
+              secondary: "var(--secondary)",
+              accent: "var(--accent)",
+              border: "var(--border)",
+              text: { main: "var(--text-main)", muted: "var(--text-muted)" },
+            },
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+              display: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="antialiased overflow-x-hidden">
+    <div class="min-h-screen lg:flex">
+      <aside
+        class="w-full lg:w-72 border-b lg:border-b-0 lg:border-r border-[var(--border)] bg-[var(--surface)]"
+      >
+        <div class="px-5 py-5 border-b border-[var(--border)]">
+          <a href="index.html" class="inline-flex items-center gap-2">
+            <span
+              class="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] text-white flex items-center justify-center"
+            >
+              <i class="fa-solid fa-graduation-cap text-sm"></i>
+            </span>
+            <span class="font-extrabold text-lg text-[var(--text-main)]">Grads Paths</span>
+          </a>
+          <p class="text-[11px] uppercase tracking-[0.12em] mt-1 text-[var(--text-muted)]">
+            Student Portal
+          </p>
+        </div>
+
+        <nav class="px-4 py-5 space-y-2 text-sm">
+          <a
+            href="index.html"
+            class="flex items-center gap-2 px-3 py-2 rounded-lg text-[var(--text-main)] hover:bg-[var(--primary)]/10"
+          >
+            <i class="fa-solid fa-arrow-left text-xs"></i> Back to the Website
+          </a>
+
+          <div class="pt-2">
+            <p class="px-3 text-xs font-semibold uppercase tracking-wide text-[var(--text-muted)]">
+              Mentors
+            </p>
+            <a
+              href="#mentors-week"
+              class="flex items-center gap-2 px-3 py-2 rounded-lg bg-[var(--primary)]/10 text-[var(--primary)]"
+              >Find Mentors Dashboard</a
+            >
+            <a href="#graduates" class="block px-8 py-1.5 text-[var(--text-muted)] hover:text-[var(--primary)]"
+              >Graduates</a
+            >
+            <a
+              href="#professionals"
+              class="block px-8 py-1.5 text-[var(--text-muted)] hover:text-[var(--primary)]"
+              >Professionals</a
+            >
+          </div>
+
+          <a
+            href="#institutions"
+            class="flex items-center gap-2 px-3 py-2 rounded-lg text-[var(--text-main)] hover:bg-[var(--primary)]/10"
+            ><i class="fa-solid fa-building-columns text-xs"></i> Institutions</a
+          >
+
+          <div>
+            <a
+              href="#programs"
+              class="flex items-center gap-2 px-3 py-2 rounded-lg text-[var(--text-main)] hover:bg-[var(--primary)]/10"
+              ><i class="fa-regular fa-rectangle-list text-xs"></i> Programs</a
+            >
+            <a href="#programs" class="block px-8 py-1.5 text-[var(--text-muted)] hover:text-[var(--primary)]">MBA</a>
+            <a href="#programs" class="block px-8 py-1.5 text-[var(--text-muted)] hover:text-[var(--primary)]">Law</a>
+            <a href="#programs" class="block px-8 py-1.5 text-[var(--text-muted)] hover:text-[var(--primary)]">Psychology</a>
+          </div>
+
+          <a
+            href="#feedback"
+            class="flex items-center gap-2 px-3 py-2 rounded-lg text-[var(--text-main)] hover:bg-[var(--primary)]/10"
+            ><i class="fa-regular fa-message text-xs"></i> Feedback</a
+          >
+          <a
+            href="#bookings"
+            class="flex items-center gap-2 px-3 py-2 rounded-lg text-[var(--text-main)] hover:bg-[var(--primary)]/10"
+            ><i class="fa-regular fa-calendar-check text-xs"></i> Bookings</a
+          >
+          <a
+            href="#support"
+            class="flex items-center gap-2 px-3 py-2 rounded-lg text-[var(--text-main)] hover:bg-[var(--primary)]/10"
+            ><i class="fa-regular fa-life-ring text-xs"></i> Support (Contact Us)</a
+          >
+        </nav>
+      </aside>
+
+      <main class="flex-1 p-4 sm:p-6 lg:p-8 space-y-7">
+        <section id="mentors-week" class="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-5 sm:p-6">
+          <div class="flex flex-wrap items-end justify-between gap-3 mb-5">
+            <div>
+              <h1 class="text-2xl sm:text-3xl font-extrabold text-[var(--text-main)]">Find Mentors</h1>
+              <p class="text-[var(--text-muted)]">
+                Grads Paths Portal • Mentors of the Week
+              </p>
+            </div>
+            <div class="flex gap-2">
+              <a href="#graduates" class="px-3 py-2 rounded-lg bg-[var(--primary)]/20 text-[var(--primary)] text-xs font-bold">See all graduate mentors</a>
+              <a href="#professionals" class="px-3 py-2 rounded-lg bg-[var(--accent)]/20 text-[var(--accent)] text-xs font-bold">See all professional mentors</a>
+            </div>
+          </div>
+
+          <div id="graduates" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+            <article class="rounded-xl border border-[var(--border)] p-4 bg-[var(--bg)]">
+              <div class="flex items-start justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-[var(--primary)]/30 flex items-center justify-center font-bold text-[var(--primary)]">SJ</div>
+                  <div>
+                    <h3 class="font-bold text-[var(--text-main)]">Dr. Sarah Jenkin</h3>
+                    <p class="text-xs text-[var(--text-muted)]">PhD • Harvard University</p>
+                  </div>
+                </div>
+                <span class="text-xs font-bold px-2 py-1 rounded bg-[var(--accent)]/20 text-[var(--accent)]">★ 5.0</span>
+              </div>
+              <p class="mt-3 text-sm text-[var(--text-main)]">Mentor note: STEM application strategy, statement of purpose review, and interview prep</p>
+              <p class="mt-2 text-xs text-[var(--text-muted)]">Student response: "Very clear, practical advice that helped me improve my essays in one session"</p>
+            </article>
+
+            <article class="rounded-xl border border-[var(--border)] p-4 bg-[var(--bg)]">
+              <div class="flex items-start justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-[var(--primary)]/30 flex items-center justify-center font-bold text-[var(--primary)]">MK</div>
+                  <div>
+                    <h3 class="font-bold text-[var(--text-main)]">Michael Kim</h3>
+                    <p class="text-xs text-[var(--text-muted)]">MBA • University of Pennsylvania</p>
+                  </div>
+                </div>
+                <span class="text-xs font-bold px-2 py-1 rounded bg-[var(--accent)]/20 text-[var(--accent)]">★ 4.9</span>
+              </div>
+              <p class="mt-3 text-sm text-[var(--text-main)]">Mentor note: Case interview prep, MBA admissions timeline planning, and profile positioning</p>
+              <p class="mt-2 text-xs text-[var(--text-muted)]">Student response: "Excellent mock interview and specific tips I could apply immediately"</p>
+            </article>
+
+            <article class="rounded-xl border border-[var(--border)] p-4 bg-[var(--bg)]">
+              <div class="flex items-start justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-[var(--primary)]/30 flex items-center justify-center font-bold text-[var(--primary)]">AL</div>
+                  <div>
+                    <h3 class="font-bold text-[var(--text-main)]">Anita Lopez</h3>
+                    <p class="text-xs text-[var(--text-muted)]">JD • Yale University</p>
+                  </div>
+                </div>
+                <span class="text-xs font-bold px-2 py-1 rounded bg-[var(--accent)]/20 text-[var(--accent)]">★ 4.8</span>
+              </div>
+              <p class="mt-3 text-sm text-[var(--text-main)]">Mentor note: Law school application strategy, personal statement editing, and LSAT planning</p>
+              <p class="mt-2 text-xs text-[var(--text-muted)]">Student response: "Great breakdown of my school list and stronger essay structure"</p>
+            </article>
+          </div>
+
+          <div id="professionals" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-4">
+            <article class="rounded-xl border border-[var(--border)] p-4 bg-[var(--bg)]">
+              <div class="flex items-start justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-[var(--accent)]/30 flex items-center justify-center font-bold text-[var(--accent)]">ER</div>
+                  <div>
+                    <h3 class="font-bold text-[var(--text-main)]">Emma Reed</h3>
+                    <p class="text-xs text-[var(--text-muted)]">LCSW • New York University</p>
+                  </div>
+                </div>
+                <span class="text-xs font-bold px-2 py-1 rounded bg-[var(--accent)]/20 text-[var(--accent)]">★ 4.9</span>
+              </div>
+              <p class="mt-3 text-sm text-[var(--text-main)]">Mentor note: Therapy licensure pathways, practicum planning, and grad application guidance</p>
+              <p class="mt-2 text-xs text-[var(--text-muted)]">Student response: "Very helpful licensure roadmap and realistic timeline"</p>
+            </article>
+
+            <article class="rounded-xl border border-[var(--border)] p-4 bg-[var(--bg)]">
+              <div class="flex items-start justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-[var(--accent)]/30 flex items-center justify-center font-bold text-[var(--accent)]">CW</div>
+                  <div>
+                    <h3 class="font-bold text-[var(--text-main)]">Chris Walker</h3>
+                    <p class="text-xs text-[var(--text-muted)]">CPA • University of Texas at Austin</p>
+                  </div>
+                </div>
+                <span class="text-xs font-bold px-2 py-1 rounded bg-[var(--accent)]/20 text-[var(--accent)]">★ 4.7</span>
+              </div>
+              <p class="mt-3 text-sm text-[var(--text-main)]">Mentor note: CPA pathway planning, recruiting strategy, and resume review for accounting roles</p>
+              <p class="mt-2 text-xs text-[var(--text-muted)]">Student response: "Actionable recruiting advice and a much stronger resume"</p>
+            </article>
+
+            <article class="rounded-xl border border-[var(--border)] p-4 bg-[var(--bg)]">
+              <div class="flex items-start justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-[var(--accent)]/30 flex items-center justify-center font-bold text-[var(--accent)]">NO</div>
+                  <div>
+                    <h3 class="font-bold text-[var(--text-main)]">Nina Owens</h3>
+                    <p class="text-xs text-[var(--text-muted)]">RN, NP • University of Michigan</p>
+                  </div>
+                </div>
+                <span class="text-xs font-bold px-2 py-1 rounded bg-[var(--accent)]/20 text-[var(--accent)]">★ 4.8</span>
+              </div>
+              <p class="mt-3 text-sm text-[var(--text-main)]">Mentor note: Nursing pathway mentorship, NP school planning, and application support</p>
+              <p class="mt-2 text-xs text-[var(--text-muted)]">Student response: "Clear NP planning guidance with useful school comparisons"</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="institutions" class="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-5 sm:p-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <h2 class="text-2xl font-extrabold text-[var(--text-main)]">Institutions</h2>
+              <p class="text-sm text-[var(--text-muted)]">
+                US schools only. Select a college, then choose a program to view available mentors.
+              </p>
+            </div>
+            <button class="px-4 py-2 rounded-lg bg-[var(--primary)] text-white text-sm font-bold">View all institutions</button>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+            <button data-college="Harvard University" class="college-btn rounded-xl border border-[var(--border)] p-3 text-left bg-[var(--bg)] hover:border-[var(--primary)]">
+              <div class="w-8 h-8 rounded-full bg-[var(--secondary)]/20 text-[var(--secondary)] flex items-center justify-center text-xs font-bold">H</div>
+              <p class="mt-2 text-xs font-bold text-[var(--text-main)]">Harvard</p>
+            </button>
+            <button data-college="Stanford University" class="college-btn rounded-xl border border-[var(--border)] p-3 text-left bg-[var(--bg)] hover:border-[var(--primary)]">
+              <div class="w-8 h-8 rounded-full bg-[var(--accent)]/20 text-[var(--accent)] flex items-center justify-center text-xs font-bold">S</div>
+              <p class="mt-2 text-xs font-bold text-[var(--text-main)]">Stanford</p>
+            </button>
+            <button data-college="University of Pennsylvania" class="college-btn rounded-xl border border-[var(--border)] p-3 text-left bg-[var(--bg)] hover:border-[var(--primary)]">
+              <div class="w-8 h-8 rounded-full bg-[var(--primary)]/20 text-[var(--primary)] flex items-center justify-center text-xs font-bold">P</div>
+              <p class="mt-2 text-xs font-bold text-[var(--text-main)]">UPenn</p>
+            </button>
+            <button data-college="Yale University" class="college-btn rounded-xl border border-[var(--border)] p-3 text-left bg-[var(--bg)] hover:border-[var(--primary)]">
+              <div class="w-8 h-8 rounded-full bg-[var(--secondary)]/20 text-[var(--secondary)] flex items-center justify-center text-xs font-bold">Y</div>
+              <p class="mt-2 text-xs font-bold text-[var(--text-main)]">Yale</p>
+            </button>
+            <button data-college="Columbia University" class="college-btn rounded-xl border border-[var(--border)] p-3 text-left bg-[var(--bg)] hover:border-[var(--primary)]">
+              <div class="w-8 h-8 rounded-full bg-[var(--accent)]/20 text-[var(--accent)] flex items-center justify-center text-xs font-bold">C</div>
+              <p class="mt-2 text-xs font-bold text-[var(--text-main)]">Columbia</p>
+            </button>
+            <button data-college="Massachusetts Institute of Technology" class="college-btn rounded-xl border border-[var(--border)] p-3 text-left bg-[var(--bg)] hover:border-[var(--primary)]">
+              <div class="w-8 h-8 rounded-full bg-[var(--text-muted)]/20 text-[var(--text-muted)] flex items-center justify-center text-xs font-bold">MIT</div>
+              <p class="mt-2 text-xs font-bold text-[var(--text-main)]">MIT</p>
+            </button>
+          </div>
+
+          <div class="mt-5 p-4 rounded-xl bg-[var(--primary)]/10 border border-[var(--primary)]/30">
+            <p class="text-sm text-[var(--text-main)]"><span class="font-bold">Selected college:</span> <span id="selected-college">Harvard University</span></p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <button class="college-program-btn px-3 py-2 rounded-lg bg-[var(--bg)] border border-[var(--primary)] text-[var(--text-main)] text-xs font-bold" data-college-program="MBA">MBA</button>
+              <button class="college-program-btn px-3 py-2 rounded-lg bg-[var(--bg)] border border-[var(--primary)] text-[var(--text-main)] text-xs font-bold" data-college-program="Law">Law</button>
+              <button class="college-program-btn px-3 py-2 rounded-lg bg-[var(--bg)] border border-[var(--primary)] text-[var(--text-main)] text-xs font-bold" data-college-program="Psychology">Psychology</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="programs" class="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-5 sm:p-6">
+          <h2 class="text-2xl font-extrabold text-[var(--text-main)]">Programs Offered</h2>
+          <p class="text-sm text-[var(--text-muted)] mt-1">
+            Select a program to view mentors across all colleges in that program.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <button class="global-program-btn px-3 py-2 rounded-lg bg-[var(--primary)] text-white text-xs font-bold" data-program="MBA">MBA</button>
+            <button class="global-program-btn px-3 py-2 rounded-lg bg-[var(--border)] text-[var(--text-main)] text-xs font-bold" data-program="Law">Law</button>
+            <button class="global-program-btn px-3 py-2 rounded-lg bg-[var(--border)] text-[var(--text-main)] text-xs font-bold" data-program="Therapy Pathways">Therapy Pathways</button>
+          </div>
+          <p class="mt-3 text-sm text-[var(--text-main)]">
+            <span class="font-bold">Current program filter:</span>
+            <span id="selected-program">MBA</span>
+          </p>
+
+          <a
+            id="support"
+            href="index.html#get-in-touch"
+            class="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--primary)] text-white text-sm font-bold"
+          >
+            <i class="fa-regular fa-life-ring"></i> Create Support Ticket
+          </a>
+        </section>
+
+        <section id="feedback" class="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-5 sm:p-6">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <h2 class="text-2xl font-extrabold text-[var(--text-main)]">Feedback</h2>
+            <button class="px-3 py-2 rounded-lg bg-[var(--secondary)]/20 text-[var(--secondary)] text-xs font-bold">Request review audit</button>
+          </div>
+          <p class="text-sm text-[var(--text-muted)] mt-2">
+            Public feedback from completed meetings is shown here for transparency.
+          </p>
+          <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="rounded-xl border border-[var(--border)] p-3">
+              <p class="font-bold text-sm text-[var(--text-main)]">Dr. Sarah Jenkin</p>
+              <p class="text-xs text-[var(--text-muted)] mt-1">"Strong structure, super clear action plan, and very responsive between sessions."</p>
+            </div>
+            <div class="rounded-xl border border-[var(--border)] p-3">
+              <p class="font-bold text-sm text-[var(--text-main)]">Michael Kim</p>
+              <p class="text-xs text-[var(--text-muted)] mt-1">"Great mock interview quality and helpful insight on program fit."</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="bookings" class="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-5 sm:p-6">
+          <h2 class="text-2xl font-extrabold text-[var(--text-main)]">Bookings</h2>
+          <p class="text-sm text-[var(--text-muted)] mt-2">
+            Google Calendar integration placeholder: when a Zoom meeting is created, bookings can sync to your calendar and appear here.
+          </p>
+          <button class="mt-4 px-4 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-bold">
+            Connect Google Calendar
+          </button>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var selectedCollegeEl = document.getElementById("selected-college");
+        var selectedProgramEl = document.getElementById("selected-program");
+        var collegeButtons = document.querySelectorAll(".college-btn");
+        var collegeProgramButtons = document.querySelectorAll(".college-program-btn");
+        var globalProgramButtons = document.querySelectorAll(".global-program-btn");
+
+        collegeButtons.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            selectedCollegeEl.textContent = btn.getAttribute("data-college");
+            collegeButtons.forEach(function (b) {
+              b.classList.remove("ring-2", "ring-[var(--primary)]");
+            });
+            btn.classList.add("ring-2", "ring-[var(--primary)]");
+          });
+        });
+
+        collegeProgramButtons.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            selectedProgramEl.textContent = btn.getAttribute("data-college-program");
+            collegeProgramButtons.forEach(function (b) {
+              b.classList.remove("!bg-[var(--primary)]", "!text-white");
+            });
+            btn.classList.add("!bg-[var(--primary)]", "!text-white");
+          });
+        });
+
+        globalProgramButtons.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            selectedProgramEl.textContent = btn.getAttribute("data-program");
+            globalProgramButtons.forEach(function (b) {
+              b.classList.remove("!bg-[var(--primary)]", "!text-white");
+              b.classList.add("bg-[var(--border)]", "text-[var(--text-main)]");
+            });
+            btn.classList.add("!bg-[var(--primary)]", "!text-white");
+            btn.classList.remove("bg-[var(--border)]", "text-[var(--text-main)]");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
