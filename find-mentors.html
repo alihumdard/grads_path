@@ -148,18 +148,30 @@
       <main class="flex-1 p-4 sm:p-6 lg:p-8 space-y-7 bg-white">
         <!-- Dashboard Header: Search and Theme Toggle -->
         <header class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6 relative">
-          <div class="relative w-full sm:max-w-md">
+          <div class="relative w-full sm:max-w-md shrink-0 sm:shrink">
             <input type="text" placeholder="Search mentors, programs..." class="w-full bg-white border border-[#6D28D9] rounded-xl px-4 py-2 pl-10 text-sm text-[#3730A3] placeholder:text-[#6D28D9]/70 focus:outline-none focus:ring-1 focus:ring-[#6D28D9] transition-all" />
             <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-[#6D28D9] text-xs"></i>
           </div>
-          <button id="theme-toggle" class="w-10 h-10 rounded-full border border-[#6D28D9] bg-white flex items-center justify-center text-[#6D28D9] hover:bg-black/5 transition-all shrink-0" aria-label="Toggle theme">
-            <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-            </svg>
-          </button>
+          
+          <div class="flex items-center justify-end gap-3 w-full sm:w-auto sm:ml-auto">
+            <div class="flex items-center gap-1.5 px-4 py-2 bg-white rounded-xl border border-[#6D28D9] text-[#3730A3] text-sm font-bold shadow-sm whitespace-nowrap shrink-0">
+              <span class="text-[#6D28D9]"><i class="fa-solid fa-coins mr-1"></i> Credits:</span>
+              <span class="text-[#E92E88]">3</span>
+            </div>
+            
+            <button id="theme-toggle" class="w-10 h-10 rounded-full border border-[#6D28D9] bg-white flex items-center justify-center text-[#6D28D9] hover:bg-black/5 transition-all shrink-0" aria-label="Toggle theme">
+              <svg class="w-4 h-4 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+            </button>
+            
+            <a href="#" class="px-5 py-2 bg-white border border-[#6D28D9] text-[#6D28D9] text-[13px] font-extrabold rounded-[20px] shadow-sm hover:text-[#3730A3] hover:bg-[#F3E8FF] transition-colors whitespace-nowrap uppercase tracking-wider shrink-0 flex items-center justify-center">
+              Store
+            </a>
+          </div>
         </header>
 
         <section id="mentors-week" class="bg-white border border-[#6D28D9] rounded-2xl p-5 sm:p-6">
