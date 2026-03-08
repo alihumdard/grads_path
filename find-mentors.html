@@ -174,6 +174,7 @@
           </div>
         </header>
 
+        <div id="dashboard-view" class="space-y-7">
         <section id="mentors-week" class="bg-white border border-[#6D28D9] rounded-2xl p-5 sm:p-6">
           <div class="flex flex-wrap items-end justify-between gap-3 mb-5">
             <div>
@@ -183,8 +184,8 @@
               </p>
             </div>
             <div class="flex gap-2">
-              <a href="#graduates" class="px-3 py-2 rounded-lg bg-[var(--primary)]/20 text-[var(--primary)] text-xs font-bold">See all graduate mentors</a>
-              <a href="#professionals" class="px-3 py-2 rounded-lg bg-[var(--accent)]/20 text-[var(--accent)] text-xs font-bold">See all professional mentors</a>
+              <button onclick="openExplore('Graduate')" class="px-3 py-2 rounded-lg bg-[var(--primary)]/20 text-[var(--primary)] text-xs font-bold">See all graduate mentors</button>
+              <button onclick="openExplore('Professional')" class="px-3 py-2 rounded-lg bg-[var(--accent)]/20 text-[var(--accent)] text-xs font-bold">See all professional mentors</button>
             </div>
           </div>
 
@@ -458,27 +459,27 @@
 
           <!-- MBA Institutions -->
           <div id="tab-content-mba" class="program-tab-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 transition-opacity duration-300">
-            <button class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
+            <button onclick="openExploreByCollege(this)" class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
               <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center text-lg font-extrabold mb-3 shadow-sm border border-[#EBE0F8]">H</div>
               <p class="text-[13px] font-extrabold text-[#3730A3]">Harvard</p>
             </button>
-            <button class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
+            <button onclick="openExploreByCollege(this)" class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
               <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center text-lg font-extrabold mb-3 shadow-sm border border-[#EBE0F8]">S</div>
               <p class="text-[13px] font-extrabold text-[#3730A3]">Stanford</p>
             </button>
-            <button class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
+            <button onclick="openExploreByCollege(this)" class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
               <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center text-lg font-extrabold mb-3 shadow-sm border border-[#EBE0F8]">P</div>
               <p class="text-[13px] font-extrabold text-[#3730A3]">UPenn</p>
             </button>
-            <button class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
+            <button onclick="openExploreByCollege(this)" class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
               <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center text-lg font-extrabold mb-3 shadow-sm border border-[#EBE0F8]">M</div>
               <p class="text-[13px] font-extrabold text-[#3730A3]">MIT</p>
             </button>
-            <button class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
+            <button onclick="openExploreByCollege(this)" class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
               <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center text-lg font-extrabold mb-3 shadow-sm border border-[#EBE0F8]">C</div>
               <p class="text-[13px] font-extrabold text-[#3730A3]">Columbia</p>
             </button>
-            <button class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
+            <button onclick="openExploreByCollege(this)" class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
               <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center text-lg font-extrabold mb-3 shadow-sm border border-[#EBE0F8]">N</div>
               <p class="text-[13px] font-extrabold text-[#3730A3]">NYU</p>
             </button>
@@ -486,19 +487,19 @@
 
           <!-- Law Institutions -->
           <div id="tab-content-law" class="program-tab-content hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 transition-opacity duration-300">
-            <button class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
+            <button onclick="openExploreByCollege(this)" class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
               <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center text-lg font-extrabold mb-3 shadow-sm border border-[#EBE0F8]">Y</div>
               <p class="text-[13px] font-extrabold text-[#3730A3]">Yale</p>
             </button>
-            <button class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
+            <button onclick="openExploreByCollege(this)" class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
               <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center text-lg font-extrabold mb-3 shadow-sm border border-[#EBE0F8]">H</div>
               <p class="text-[13px] font-extrabold text-[#3730A3]">Harvard</p>
             </button>
-            <button class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
+            <button onclick="openExploreByCollege(this)" class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
               <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center text-lg font-extrabold mb-3 shadow-sm border border-[#EBE0F8]">S</div>
               <p class="text-[13px] font-extrabold text-[#3730A3]">Stanford</p>
             </button>
-            <button class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
+            <button onclick="openExploreByCollege(this)" class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
               <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center text-lg font-extrabold mb-3 shadow-sm border border-[#EBE0F8]">C</div>
               <p class="text-[13px] font-extrabold text-[#3730A3]">Columbia</p>
             </button>
@@ -506,15 +507,15 @@
 
           <!-- Therapy Institutions -->
           <div id="tab-content-therapy" class="program-tab-content hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 transition-opacity duration-300">
-            <button class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
+            <button onclick="openExploreByCollege(this)" class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
               <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center text-lg font-extrabold mb-3 shadow-sm border border-[#EBE0F8]">N</div>
               <p class="text-[13px] font-extrabold text-[#3730A3]">NYU</p>
             </button>
-            <button class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
+            <button onclick="openExploreByCollege(this)" class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
               <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center text-lg font-extrabold mb-3 shadow-sm border border-[#EBE0F8]">U</div>
               <p class="text-[13px] font-extrabold text-[#3730A3]">UT Austin</p>
             </button>
-            <button class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
+            <button onclick="openExploreByCollege(this)" class="flex flex-col items-center justify-center rounded-2xl border border-[#6D28D9] p-4 bg-white hover:bg-[#F9F5FF] transition-colors">
               <div class="w-12 h-12 rounded-full bg-[#F3E8FF] text-[#6D28D9] flex items-center justify-center text-lg font-extrabold mb-3 shadow-sm border border-[#EBE0F8]">M</div>
               <p class="text-[13px] font-extrabold text-[#3730A3]">U Michigan</p>
             </button>
@@ -550,6 +551,70 @@
             Connect Google Calendar
           </button>
         </section>
+      </div>
+
+      <!-- EXPLORE MENTORS VIEW (Hidden by default) -->
+      <div id="explore-view" class="hidden space-y-7">
+        <div class="bg-white border border-[#6D28D9] rounded-3xl p-6 sm:p-8">
+          <div class="flex flex-wrap items-center justify-between mb-6 gap-4 border-b border-[#EBE0F8] pb-5">
+            <div>
+              <button onclick="showDashboard()" class="text-[#6D28D9] bg-[#F3E8FF] px-4 py-2 rounded-xl text-sm font-bold hover:bg-[#EBE0F8] mb-3 flex items-center gap-2 transition-colors"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</button>
+              <h1 id="explore-title" class="text-2xl sm:text-3xl font-extrabold text-[#3730A3]">Explore Mentors</h1>
+            </div>
+          </div>
+
+          <!-- Filters -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 bg-[#F3E8FF] p-5 rounded-2xl border border-[#EBE0F8]">
+            <div>
+              <label class="block text-[11px] font-extrabold text-[#6D28D9] tracking-wider uppercase mb-1.5">Program</label>
+              <select id="filter-program" onchange="renderExploreGrid()" class="w-full bg-white border border-[#6D28D9] rounded-xl px-3 py-2.5 text-sm text-[#3730A3] font-bold focus:outline-none focus:ring-1 focus:ring-[#6D28D9]">
+                <option value="">All Programs</option>
+                <option value="MBA">MBA Programs</option>
+                <option value="Law">Law Programs</option>
+                <option value="Therapy">Therapy Pathways</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-[11px] font-extrabold text-[#6D28D9] tracking-wider uppercase mb-1.5">Mentor Type</label>
+              <select id="filter-type" onchange="renderExploreGrid()" class="w-full bg-white border border-[#6D28D9] rounded-xl px-3 py-2.5 text-sm text-[#3730A3] font-bold focus:outline-none focus:ring-1 focus:ring-[#6D28D9]">
+                <option value="">All Types</option>
+                <option value="Graduate">Graduate Mentors</option>
+                <option value="Professional">Professional Mentors</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-extrabold text-[#6D28D9] tracking-wider uppercase mb-1.5">Institution</label>
+              <select id="filter-college" onchange="renderExploreGrid()" class="w-full bg-white border border-[#6D28D9] rounded-xl px-3 py-2.5 text-sm text-[#3730A3] font-bold focus:outline-none focus:ring-1 focus:ring-[#6D28D9]">
+                <option value="">All Institutions</option>
+                <option value="Harvard">Harvard University</option>
+                <option value="Stanford">Stanford University</option>
+                <option value="UPenn">University of Pennsylvania</option>
+                <option value="Yale">Yale University</option>
+                <option value="Columbia">Columbia University</option>
+                <option value="MIT">MIT</option>
+                <option value="NYU">NYU</option>
+                <option value="UT Austin">UT Austin</option>
+                <option value="U Michigan">University of Michigan</option>
+              </select>
+            </div>
+            
+            <div>
+              <label class="block text-[11px] font-extrabold text-[#6D28D9] tracking-wider uppercase mb-1.5">Availability Date/Time</label>
+              <div class="flex gap-2">
+                <input type="date" id="filter-date" onchange="renderExploreGrid()" class="w-1/2 bg-white border border-[#6D28D9] rounded-xl px-2 py-2.5 text-sm text-[#3730A3] font-bold focus:outline-none focus:ring-1 focus:ring-[#6D28D9]" />
+                <input type="time" id="filter-time" onchange="renderExploreGrid()" class="w-1/2 bg-white border border-[#6D28D9] rounded-xl px-2 py-2.5 text-sm text-[#3730A3] font-bold focus:outline-none focus:ring-1 focus:ring-[#6D28D9]" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Mentors Grid -->
+          <div id="explore-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+            <!-- Mentors injected via JS -->
+          </div>
+        </div>
+      </div>
       </main>
     </div>
 
@@ -591,6 +656,116 @@
           activeContent.classList.remove('hidden');
         };
       });
-    </script>
+    
+        // Mentors Data for Explore View
+        const exploreMentors = [
+          { name: 'Dr. Sarah Jenkin', credentials: 'PhD • Harvard University', type: 'Graduate', program: 'MBA', college: 'Harvard', rating: 5.0, img: 'sarah' },
+          { name: 'Michael Kim', credentials: 'MBA • University of Pennsylvania', type: 'Graduate', program: 'MBA', college: 'UPenn', rating: 4.9, img: 'michael' },
+          { name: 'Emma Reed', credentials: 'LCSW • New York University', type: 'Professional', program: 'Therapy', college: 'NYU', rating: 4.9, img: 'emma' },
+          { name: 'Anita Lopez', credentials: 'JD • Yale University', type: 'Graduate', program: 'Law', college: 'Yale', rating: 4.8, img: 'anita' },
+          { name: 'Nina Owens', credentials: 'RN, NP • University of Michigan', type: 'Professional', program: 'Therapy', college: 'U Michigan', rating: 4.8, img: 'nina' },
+          { name: 'Chris Walker', credentials: 'CPA • University of Texas at Austin', type: 'Professional', program: 'MBA', college: 'UT Austin', rating: 4.7, img: 'chris' },
+          { name: 'David Smith', credentials: 'MBA • Stanford University', type: 'Graduate', program: 'MBA', college: 'Stanford', rating: 4.6, img: 'david' },
+          { name: 'Jessica Lee', credentials: 'JD • Columbia University', type: 'Graduate', program: 'Law', college: 'Columbia', rating: 4.5, img: 'jessica' }
+        ];
+
+        window.showDashboard = function() {
+          document.getElementById('dashboard-view').classList.remove('hidden');
+          document.getElementById('explore-view').classList.add('hidden');
+          window.scrollTo(0,0);
+        };
+
+        window.openExplore = function(typeFilter) {
+          document.getElementById('dashboard-view').classList.add('hidden');
+          document.getElementById('explore-view').classList.remove('hidden');
+          
+          document.getElementById('explore-title').textContent = typeFilter === 'Graduate' ? 'Explore Graduate Mentors' : (typeFilter === 'Professional' ? 'Explore Professional Mentors' : 'Explore All Mentors');
+          
+          // Reset all filters except type
+          document.getElementById('filter-program').value = '';
+          document.getElementById('filter-college').value = '';
+          document.getElementById('filter-date').value = '';
+          document.getElementById('filter-time').value = '';
+          document.getElementById('filter-type').value = typeFilter;
+          
+          window.renderExploreGrid();
+          window.scrollTo(0,0);
+        };
+
+        window.openExploreByCollege = function(btn) {
+          const collegeName = btn.querySelector('p').textContent;
+          // Determine program based on active tab
+          let activeProgram = '';
+          if(!document.getElementById('tab-content-mba').classList.contains('hidden')) activeProgram = 'MBA';
+          else if(!document.getElementById('tab-content-law').classList.contains('hidden')) activeProgram = 'Law';
+          else activeProgram = 'Therapy';
+          
+          document.getElementById('dashboard-view').classList.add('hidden');
+          document.getElementById('explore-view').classList.remove('hidden');
+          document.getElementById('explore-title').textContent = activeProgram + ' Mentors at ' + collegeName;
+
+          document.getElementById('filter-program').value = activeProgram;
+          document.getElementById('filter-type').value = '';
+          document.getElementById('filter-college').value = collegeName;
+          document.getElementById('filter-date').value = '';
+          document.getElementById('filter-time').value = '';
+
+          window.renderExploreGrid();
+          window.scrollTo(0,0);
+        };
+
+        window.renderExploreGrid = function() {
+          const grid = document.getElementById('explore-grid');
+          grid.innerHTML = '';
+          
+          const progFilter = document.getElementById('filter-program').value;
+          const colFilter = document.getElementById('filter-college').value;
+          const typeFilter = document.getElementById('filter-type').value;
+          
+          let filtered = exploreMentors.filter(m => {
+            if (typeFilter && m.type !== typeFilter) return false;
+            if (progFilter && m.program !== progFilter) return false;
+            // Includes logic allows 'Harvard' to match 'Harvard University'
+            if (colFilter && !m.college.includes(colFilter) && !colFilter.includes(m.college)) return false;
+            return true;
+          });
+          
+          // Sort by rating desc
+          filtered.sort((a,b) => b.rating - a.rating);
+          
+          if(filtered.length === 0) {
+            grid.innerHTML = '<p class="col-span-full text-center py-10 text-[#6D28D9] font-bold">No mentors found matching these criteria.</p>';
+            return;
+          }
+
+          filtered.forEach(m => {
+            grid.innerHTML += `
+              <article class="rounded-3xl p-4 bg-[#F3E8FF] space-y-3 shadow-sm border border-[#EBE0F8] flex flex-col h-full">
+                <div class="flex items-start justify-between mb-2">
+                  <div class="flex items-center gap-3">
+                    <img src="https://i.pravatar.cc/150?u=${m.img}" alt="${m.name}" class="w-14 h-14 rounded-2xl object-cover shrink-0 shadow-sm" />
+                    <div class="flex flex-col">
+                      <h3 class="font-extrabold text-xl text-[#3730A3] leading-tight mb-0.5">${m.name}</h3>
+                      <p class="text-[13px] font-bold text-[#6D28D9]">${m.credentials}</p>
+                    </div>
+                  </div>
+                  <span class="text-sm font-bold px-3 py-1.5 rounded-full bg-white text-[#5B30E5] shadow-sm flex items-center gap-1 shrink-0">★ ${m.rating.toFixed(1)}</span>
+                </div>
+                <div class="bg-white rounded-[20px] p-5 shadow-sm relative flex-1">
+                   <p class="text-[15px] font-bold text-[#3730A3] leading-snug">
+                      Expert in ${m.program} applications, timeline planning, and professional positioning strategies.
+                   </p>
+                </div>
+                <!-- Action Buttons -->
+                <div class="grid grid-cols-2 gap-3 mt-auto pt-2">
+                  <button class="py-2.5 rounded-2xl bg-[#6D28D9] text-white font-extrabold shadow-sm hover:opacity-90 transition-opacity text-sm">View Profile</button>
+                  <button class="py-2.5 rounded-2xl bg-white border border-[#6D28D9] text-[#6D28D9] font-extrabold shadow-sm hover:bg-[#F3E8FF] transition-opacity text-sm">Check Availability</button>
+                </div>
+              </article>
+            `;
+          });
+        }
+
+      </script>
   </body>
 </html>
