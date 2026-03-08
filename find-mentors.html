@@ -167,8 +167,20 @@
           
           <div class="flex items-center justify-end gap-3 w-full sm:w-auto sm:ml-auto">
             <button id="theme-toggle" class="w-10 h-10 rounded-full border border-[#6D28D9] dark:border-[#a78bfa] bg-white dark:bg-[#1a1033] flex items-center justify-center text-[#6D28D9] dark:text-[#a78bfa] hover:bg-[#F3E8FF] dark:hover:bg-white/5 transition-all shrink-0" aria-label="Toggle theme">
-              <i class="fa-regular fa-sun dark:hidden text-[16px]"></i>
-              <i class="fa-regular fa-moon hidden dark:block text-[16px]"></i>
+              <svg class="dark:hidden" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4.5"></circle>
+                <line x1="12" y1="2" x2="12" y2="4.5"></line>
+                <line x1="12" y1="19.5" x2="12" y2="22"></line>
+                <line x1="4.5" y1="12" x2="2" y2="12"></line>
+                <line x1="22" y1="12" x2="19.5" y2="12"></line>
+                <line x1="19.5" y1="4.5" x2="17.5" y2="6.5"></line>
+                <line x1="6.5" y1="17.5" x2="4.5" y2="19.5"></line>
+                <line x1="19.5" y1="19.5" x2="17.5" y2="17.5"></line>
+                <line x1="4.5" y1="4.5" x2="6.5" y2="6.5"></line>
+              </svg>
+              <svg class="hidden dark:block" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
             </button>          
 
             <div class="flex items-center gap-1.5 px-5 py-[9px] bg-white dark:bg-[#1a1033] rounded-full border border-[#6D28D9] dark:border-[#a78bfa] text-[#3730A3] dark:text-white text-[13px] font-bold shadow-sm whitespace-nowrap shrink-0 transition-colors">
