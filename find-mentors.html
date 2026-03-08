@@ -55,65 +55,93 @@
           </a>
         </div>
 
-        <nav class="px-4 py-5 space-y-2 text-sm">
-          <a
-            href="index.html"
-            class="flex items-center gap-2 px-3 py-2 rounded-lg text-[#3730A3] hover:bg-[var(--primary)]/10"
-          >
-            <i class="fa-solid fa-arrow-left text-xs"></i> Back to the Website
+        <nav class="px-4 py-5 space-y-1.5 text-sm font-semibold text-[#6D28D9] h-[calc(100vh-80px)] overflow-y-auto">
+          
+          <a href="index.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[#6D28D9] bg-white border border-transparent hover:border-[#6D28D9] hover:text-[#3730A3] transition-colors mb-2">
+            <i class="fa-solid fa-arrow-left text-sm w-4 text-center"></i> 
+            <span>Back to the Website</span>
           </a>
 
-          <div class="pt-2">
-            <p class="px-3 text-xs font-semibold uppercase tracking-wide text-[#6D28D9]">
-              Mentors
-            </p>
-            <a
-              href="#mentors-week"
-              class="flex items-center gap-2 px-3 py-2 rounded-lg bg-[var(--primary)]/10 text-[var(--primary)]"
-              >Find Mentors Dashboard</a
-            >
-            <a href="#graduates" class="block px-8 py-1.5 text-[#6D28D9] hover:text-[var(--primary)]"
-              >Graduates</a
-            >
-            <a
-              href="#professionals"
-              class="block px-8 py-1.5 text-[#6D28D9] hover:text-[var(--primary)]"
-              >Professionals</a
-            >
+          <!-- Find Mentors (Active/Open by default) -->
+          <details open class="group">
+            <summary class="flex items-center justify-between px-3 py-2.5 rounded-xl cursor-pointer list-none [&::-webkit-details-marker]:hidden bg-white border border-[#6D28D9] text-[#3730A3] font-bold transition-colors">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-user-group text-sm w-4 text-center"></i>
+                <span>Find Mentors</span>
+              </div>
+              <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-open:rotate-180"></i>
+            </summary>
+            <div class="flex flex-col gap-1 px-3 py-2 ml-4 border-l-2 border-[#EBE0F8] mt-1 space-y-1">
+              <a href="#graduates" class="block px-3 py-1.5 text-[13px] font-medium text-[#6D28D9] hover:text-[#3730A3]">Graduates</a>
+              <a href="#professionals" class="block px-3 py-1.5 text-[13px] font-medium text-[#6D28D9] hover:text-[#3730A3]">Professionals</a>
+            </div>
+          </details>
+
+          <!-- Institutions -->
+          <details class="group">
+            <summary class="flex items-center justify-between px-3 py-2.5 rounded-xl cursor-pointer list-none [&::-webkit-details-marker]:hidden bg-white border border-transparent hover:border-[#6D28D9] text-[#6D28D9] hover:text-[#3730A3] font-bold transition-colors">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-building-columns text-sm w-4 text-center"></i>
+                <span>Institutions</span>
+              </div>
+              <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-open:rotate-180"></i>
+            </summary>
+            <div class="flex flex-col gap-1 px-3 py-2 ml-4 border-l-2 border-[#EBE0F8] mt-1 space-y-1">
+              <a href="#institutions" class="block px-3 py-1.5 text-[13px] font-medium text-[#6D28D9] hover:text-[#3730A3]">Elite Programs</a>
+              <a href="#institutions" class="block px-3 py-1.5 text-[13px] font-medium text-[#6D28D9] hover:text-[#3730A3]">Top 25 Programs</a>
+              <a href="#institutions" class="block px-3 py-1.5 text-[13px] font-medium text-[#6D28D9] hover:text-[#3730A3]">Regional Leaders</a>
+            </div>
+          </details>
+
+          <!-- Programs -->
+          <details class="group">
+            <summary class="flex items-center justify-between px-3 py-2.5 rounded-xl cursor-pointer list-none [&::-webkit-details-marker]:hidden bg-white border border-transparent hover:border-[#6D28D9] text-[#6D28D9] hover:text-[#3730A3] font-bold transition-colors">
+              <div class="flex items-center gap-3">
+                <i class="fa-regular fa-rectangle-list text-sm w-4 text-center"></i>
+                <span>Programs</span>
+              </div>
+              <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-open:rotate-180"></i>
+            </summary>
+            <div class="flex flex-col gap-1 px-3 py-2 ml-4 border-l-2 border-[#EBE0F8] mt-1 space-y-1">
+              <a href="#programs" class="block px-3 py-1.5 text-[13px] font-medium text-[#6D28D9] hover:text-[#3730A3]">MBA</a>
+              <a href="#programs" class="block px-3 py-1.5 text-[13px] font-medium text-[#6D28D9] hover:text-[#3730A3]">Law</a>
+              <a href="#programs" class="block px-3 py-1.5 text-[13px] font-medium text-[#6D28D9] hover:text-[#3730A3]">Psychology</a>
+            </div>
+          </details>
+
+          <!-- Standard Links -->
+          <a href="#feedback" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[#6D28D9] bg-white border border-transparent hover:border-[#6D28D9] hover:text-[#3730A3] font-bold transition-colors mt-2">
+            <i class="fa-regular fa-message text-sm w-4 text-center"></i> 
+            <span>Feedback</span>
+          </a>
+
+          <a href="#" class="flex flex-col gap-0.5 px-3 py-2.5 rounded-xl text-[#6D28D9] bg-white border border-transparent hover:border-[#6D28D9] hover:text-[#3730A3] font-bold transition-colors">
+            <div class="flex items-center gap-3">
+              <i class="fa-regular fa-clipboard text-sm w-4 text-center"></i> 
+              <span class="leading-tight">Mentor Notes on Users</span>
+            </div>
+            <span class="text-[10px] font-medium text-[#E92E88] ml-7">Only visible to verified mentors</span>
+          </a>
+
+          <a href="#bookings" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[#6D28D9] bg-white border border-transparent hover:border-[#6D28D9] hover:text-[#3730A3] font-bold transition-colors">
+            <i class="fa-regular fa-calendar-check text-sm w-4 text-center"></i> 
+            <span>Bookings</span>
+          </a>
+
+          <a href="index.html#get-in-touch" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-[#6D28D9] bg-white border border-transparent hover:border-[#6D28D9] hover:text-[#3730A3] font-bold transition-colors">
+            <i class="fa-regular fa-life-ring text-sm w-4 text-center"></i> 
+            <span>Support</span>
+          </a>
+
+          <!-- SETTINGS SECTION -->
+          <div class="pt-6 pb-2">
+            <p class="px-3 text-[11px] font-bold uppercase tracking-wider text-[#3730A3]/60 mb-2 border-t border-[#EBE0F8] pt-6">Settings</p>
+            <a href="#" class="flex flex-col gap-1 px-3 py-2 rounded-xl text-[#6D28D9] bg-white border border-transparent hover:border-[#6D28D9] hover:text-[#3730A3] font-bold transition-colors">
+              <span class="leading-tight">Profile & Preferences</span>
+              <span class="text-[10px] font-normal text-[#6D28D9]/70">Change what's displayed about you</span>
+            </a>
           </div>
 
-          <a
-            href="#institutions"
-            class="flex items-center gap-2 px-3 py-2 rounded-lg text-[#3730A3] hover:bg-[var(--primary)]/10"
-            ><i class="fa-solid fa-building-columns text-xs"></i> Institutions</a
-          >
-
-          <div>
-            <a
-              href="#programs"
-              class="flex items-center gap-2 px-3 py-2 rounded-lg text-[#3730A3] hover:bg-[var(--primary)]/10"
-              ><i class="fa-regular fa-rectangle-list text-xs"></i> Programs</a
-            >
-            <a href="#programs" class="block px-8 py-1.5 text-[#6D28D9] hover:text-[var(--primary)]">MBA</a>
-            <a href="#programs" class="block px-8 py-1.5 text-[#6D28D9] hover:text-[var(--primary)]">Law</a>
-            <a href="#programs" class="block px-8 py-1.5 text-[#6D28D9] hover:text-[var(--primary)]">Psychology</a>
-          </div>
-
-          <a
-            href="#feedback"
-            class="flex items-center gap-2 px-3 py-2 rounded-lg text-[#3730A3] hover:bg-[var(--primary)]/10"
-            ><i class="fa-regular fa-message text-xs"></i> Feedback</a
-          >
-          <a
-            href="#bookings"
-            class="flex items-center gap-2 px-3 py-2 rounded-lg text-[#3730A3] hover:bg-[var(--primary)]/10"
-            ><i class="fa-regular fa-calendar-check text-xs"></i> Bookings</a
-          >
-          <a
-            href="#support"
-            class="flex items-center gap-2 px-3 py-2 rounded-lg text-[#3730A3] hover:bg-[var(--primary)]/10"
-            ><i class="fa-regular fa-life-ring text-xs"></i> Support (Contact Us)</a
-          >
         </nav>
       </aside>
 
