@@ -40,16 +40,7 @@
 
 <body class="antialiased bg-[var(--bg)] text-[var(--text-main)] overflow-x-hidden transition-colors duration-300">
   <!-- Minimal top strip: logo + actions only (no navbar bar) -->
-  <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-4 flex flex-wrap items-center justify-between gap-4">
-    <a href="index.html" class="inline-flex items-center gap-2 shrink-0 no-underline">
-      <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--accent)] to-[var(--primary)] text-white flex items-center justify-center shrink-0">
-        <i class="fa-solid fa-graduation-cap text-sm"></i>
-      </span>
-      <span class="flex flex-col gap-0 leading-tight">
-        <span class="font-display font-bold text-base text-[var(--text-main)]">Grads Paths</span>
-        <span class="text-[11px] text-[var(--text-muted)]">Graduate guidance, done right</span>
-      </span>
-    </a>
+  <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-4 flex flex-wrap items-center justify-end gap-4">
     <div class="flex flex-wrap items-center gap-2" aria-label="Primary">
       <a href="#pricing"
         class="inline-flex items-center justify-center px-4 py-2.5 rounded-full text-sm font-bold text-[var(--text-main)] bg-white dark:bg-[var(--surface)] border border-slate-200 dark:border-[var(--border)] hover:border-[var(--primary)]/50 hover:text-[var(--primary)] transition-colors whitespace-nowrap">
@@ -68,180 +59,179 @@
 
   <main class="pb-20 px-4 sm:px-6 max-w-6xl mx-auto overflow-x-hidden">
     <!-- Why Grads Paths: two columns - left: heading + content + card, right: 3 boxes aligned with heading -->
-    <section class="mb-16 sm:mb-20 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10" id="why-grads">
-      <!-- Left column: heading, paragraph, tags, 15-min card -->
-      <div class="lg:col-span-2 flex flex-col">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--text-main)] mb-4">Why Grads Paths</h1>
-        <p class="text-[var(--text-muted)] text-base max-w-2xl mb-6 leading-relaxed">
-          Most students don't need a $300–$500/hr consulting package. They need the right mentor, the right plan, and honest feedback that reflects what programs and employers expect today. Grads Paths gives you verified graduate mentors and professionals with transparent pricing, so you can get high-quality help without premium overhead.
-        </p>
-        <div class="flex flex-wrap gap-3 mb-10">
-          <span class="px-4 py-2 rounded-full text-sm font-semibold bg-white dark:bg-[var(--surface)] border border-[var(--secondary)] text-[var(--secondary)]">Transparent pricing</span>
-          <span class="px-4 py-2 rounded-full text-sm font-semibold bg-white dark:bg-[var(--surface)] border border-[var(--accent)] text-[var(--accent)]">Real mentorship</span>
-          <span class="px-4 py-2 rounded-full text-sm font-semibold bg-white dark:bg-[var(--surface)] border border-[var(--primary)] text-[var(--primary)]">Next-step focused</span>
-        </div>
+    <section class="mb-16 sm:mb-20 flex flex-col items-center mx-auto" id="why-grads">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1D1440] mb-5 tracking-tight text-center">Why Grads Paths</h1>
+      <p class="text-[#555273] text-base md:text-[1.1rem] max-w-4xl mb-8 leading-relaxed text-center font-medium">
+        Most students don't need a $300 to $500 per hour consulting package. They need the right mentor, the right plan, and honest feedback that reflects what programs and employers expect today. Grads Paths gives you verified graduate mentors and professionals with transparent pricing so you can get high-quality help without premium overhead.
+      </p>
 
-        <div class="rounded-2xl border border-[var(--border)] bg-[var(--secondary)]/10 dark:bg-[var(--secondary)]/15 p-6 sm:p-8 relative">
-          <div class="flex flex-wrap items-center gap-3 mb-4">
-            <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-bold text-[var(--secondary)] bg-[var(--secondary)]/20 dark:bg-[var(--secondary)]/25 border border-[var(--secondary)]/40">Free</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-[var(--text-main)] m-0">15-minute consultation</h2>
-          </div>
-          <p class="text-[var(--text-muted)] text-sm mb-5 leading-relaxed">
-            Meet a mentor, confirm fit, and align goals before spending any money. We care about user success, so we start with clarity and fit—not pressure.
-          </p>
-          <ul class="space-y-2 text-sm text-[var(--text-muted)] mb-6">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] mt-0.5 shrink-0"></i><span>Choose a mentor and test the fit</span></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] mt-0.5 shrink-0"></i><span>Identify your biggest lever for improvement</span></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] mt-0.5 shrink-0"></i><span>Leave with a clear, realistic next step</span></li>
-          </ul>
-          <div class="flex flex-wrap gap-3">
-            <a href="index.html#get-in-touch" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-[var(--secondary)] to-[var(--primary)] hover:opacity-90 transition-opacity">Start free consult</a>
-            <a href="find-mentors.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-[var(--text-main)] bg-white dark:bg-transparent border-2 border-[var(--border)] hover:border-[var(--primary)] hover:text-[var(--primary)] transition-colors">Browse mentors</a>
-          </div>
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <span class="px-5 py-2.5 rounded-full text-[15px] font-bold border-2 border-[#FE5673] bg-white text-[#FE5673] tracking-tight">Transparent pricing</span>
+        <span class="px-5 py-2.5 rounded-full text-[15px] font-bold border-2 border-[#3E80EE] bg-white text-[#3E80EE] tracking-tight">Real mentorship</span>
+        <span class="px-5 py-2.5 rounded-full text-[15px] font-bold border-2 border-[#9A6FFF] bg-white text-[#9A6FFF] tracking-tight">Next-step focused</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 w-full max-w-4xl mx-auto">
+        <div class="rounded-2xl bg-[#FCFBFF] p-6 lg:p-8 flex flex-col items-center text-center">
+          <h3 class="font-extrabold text-[#1D1440] text-lg mb-2">Pay-per-session</h3>
+          <p class="text-[15px] leading-snug text-[#555273] font-medium">No forced bundles or<br/>long programs.</p>
+        </div>
+        <div class="rounded-2xl bg-[#FCFBFF] p-6 lg:p-8 flex flex-col items-center text-center">
+          <h3 class="font-extrabold text-[#1D1440] text-lg mb-2">Current insight</h3>
+          <p class="text-[15px] leading-snug text-[#555273] font-medium">Mentors close to the<br/>process you're entering.</p>
+        </div>
+        <div class="rounded-2xl bg-[#FCFBFF] p-6 lg:p-8 flex flex-col items-center text-center">
+          <h3 class="font-extrabold text-[#1D1440] text-lg mb-2">Better value</h3>
+          <p class="text-[15px] leading-snug text-[#555273] font-medium">Premium-quality<br/>guidance without<br/>premium pricing.</p>
         </div>
       </div>
 
-      <!-- Right column: 3 boxes, aligned with "Why Grads Paths" row -->
-      <div class="flex flex-col gap-4 lg:pt-0">
-        <div class="rounded-2xl border border-[var(--border)] bg-white dark:bg-[var(--surface)] p-5">
-          <h3 class="font-bold text-[var(--text-main)] mb-1">Pay-per-session</h3>
-          <p class="text-sm text-[var(--text-muted)]">No forced bundles or long programs.</p>
+      <div class="rounded-2xl bg-[#FCFBFF] border border-[#F2EEFA] p-6 lg:p-8 mt-8 w-full max-w-4xl mx-auto text-left">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="inline-flex items-center px-3 py-1 rounded-md text-sm font-bold text-[#E92E88] border border-[#F9A8D4] bg-white bg-opacity-80">Free</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1D1440]">15-minute consultation</h2>
         </div>
-        <div class="rounded-2xl border border-[var(--border)] bg-white dark:bg-[var(--surface)] p-5">
-          <h3 class="font-bold text-[var(--text-main)] mb-1">Current insight</h3>
-          <p class="text-sm text-[var(--text-muted)]">Mentors close to the process you're entering.</p>
-        </div>
-        <div class="rounded-2xl border border-[var(--border)] bg-white dark:bg-[var(--surface)] p-5">
-          <h3 class="font-bold text-[var(--text-main)] mb-1">Better value</h3>
-          <p class="text-sm text-[var(--text-muted)]">Premium-quality guidance without premium pricing.</p>
+        <p class="text-[1.05rem] text-[#6D28D9] mb-6 leading-relaxed font-medium max-w-3xl">
+          Meet a mentor, confirm fit, and align goals before spending any money. We care about user success, so we start with clarity and fit—not pressure.
+        </p>
+        <ul class="space-y-3 mb-8 text-[1.05rem] text-[#6D28D9] font-medium">
+          <li class="flex items-start gap-3"><i class="fa-solid fa-check mt-1"></i><span>Choose a mentor and test the fit</span></li>
+          <li class="flex items-start gap-3"><i class="fa-solid fa-check mt-1"></i><span>Identify your biggest lever for improvement</span></li>
+          <li class="flex items-start gap-3"><i class="fa-solid fa-check mt-1"></i><span>Leave with a clear, realistic next step</span></li>
+        </ul>
+        <div class="flex flex-wrap gap-4">
+          <a href="find-mentors.html" class="inline-flex items-center justify-center px-6 py-3 rounded-full text-[15px] font-bold text-white bg-gradient-to-r from-[#D9269A] to-[#6D28D9] hover:opacity-90 transition-opacity">Start free consult</a>
+          <a href="find-mentors.html" class="inline-flex items-center justify-center px-6 py-3 rounded-full text-[15px] font-bold text-[#1D1440] bg-white border-2 border-[#E9D5FF] hover:bg-[#F3E8FF] transition-colors">Browse mentors</a>
         </div>
       </div>
     </section>
 
     <!-- Pricing comparison -->
     <section class="mb-16 sm:mb-20" id="pricing">
-      <h2 class="text-2xl sm:text-3xl font-bold text-[var(--text-main)] text-center mb-4">Pricing comparison (per 60 minutes)</h2>
-      <p class="text-[var(--text-muted)] max-w-3xl mx-auto mb-6 text-center">
-        Grads Paths uses your posted hourly rates. "Market norm" and "high-end" are typical ranges many students encounter and can vary by provider, scope, and packages.
-      </p>
+      <div class="rounded-t-[2.5rem] bg-[#FAEFF8] bg-opacity-70 pt-12 pb-6 px-4">
+        <h2 class="text-3xl sm:text-4xl md:text-[2.75rem] font-extrabold text-[#3730A3] tracking-tight text-center mb-4">Pricing comparison (per 60 minutes)</h2>
+        <p class="text-[#6B7280] font-medium text-sm md:text-[15px] max-w-4xl mx-auto mb-8 text-center leading-relaxed">
+          Grads Paths uses your posted rates. "Market norm" and "high-end competitors" are rounded benchmark ranges based on public tutoring, admissions consulting, and interview prep pricing.
+        </p>
 
-      <!-- Legend: outside graph box -->
-      <div class="flex flex-wrap gap-6 mb-2 text-sm justify-center">
-        <span class="flex items-center gap-2"><span class="w-4 h-3 rounded-sm bg-[var(--secondary)] shrink-0"></span> Grads Paths</span>
-        <span class="flex items-center gap-2"><span class="w-4 h-3 rounded-sm bg-[var(--accent)] shrink-0"></span> Market norm</span>
-        <span class="flex items-center gap-2"><span class="w-4 h-3 rounded-sm bg-gray-400 dark:bg-gray-500 shrink-0"></span> High-end competitors</span>
+        <!-- Legend: outside graph box -->
+        <div class="flex flex-wrap gap-8 mb-2 sm:mb-4 text-[13px] justify-center font-bold text-[#3730A3]">
+          <span class="flex items-center gap-2"><span class="w-5 h-3.5 rounded-sm bg-[#E46FA3] shrink-0"></span> Grads Paths</span>
+          <span class="flex items-center gap-2"><span class="w-5 h-3.5 rounded-sm bg-[#8CC6DF] shrink-0"></span> Market norm</span>
+          <span class="flex items-center gap-2"><span class="w-5 h-3.5 rounded-sm bg-[#CFCFD4] shrink-0"></span> High-end competitors</span>
+        </div>
       </div>
-      <div class="rounded-2xl border border-[var(--border)] bg-white dark:bg-[var(--surface)] pt-4 px-6 pb-6 sm:pt-5 sm:px-8 sm:pb-8 overflow-x-auto">
-        <p class="text-sm font-bold text-[var(--text-main)] text-center mt-0 mb-12">$ per 60 minutes</p>
-        <!-- Bar chart: 5 groups, 3 bars each. Heights proportional to price (scale 250 = 10rem) -->
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-10 sm:gap-8 min-w-[360px]" role="img" aria-label="Pricing comparison bar chart per 60 minutes">
-          <!-- Tutoring: $70, $120, $250 -->
+      <div class="bg-white pt-10 px-6 pb-6 overflow-x-auto">
+        <p class="text-sm font-bold text-[#3730A3] text-center mt-0 mb-12">$ per 60 minutes</p>
+        <!-- Bar chart -->
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-10 sm:gap-8 min-w-[500px]" role="img" aria-label="Pricing comparison bar chart per 60 minutes">
+          <!-- Tutoring: $70, $95, $180 -->
           <div class="flex flex-col items-center gap-1 flex-1 min-w-0">
-            <div class="flex items-end justify-center gap-1 sm:gap-2 w-full h-40">
+            <div class="flex items-end justify-center gap-2 sm:gap-3 w-full h-[14rem]">
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">Grads Paths $70</span>
-                <div class="w-8 sm:w-9 rounded-t bg-[var(--secondary)] h-[2.8rem] sm:h-[3rem]" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">Grads<br/>Paths $70</span>
+                <div class="w-full rounded-t bg-[#E46FA3]" style="height: 12%;"></div>
               </div>
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">Market $120</span>
-                <div class="w-8 sm:w-9 rounded-t bg-[var(--accent)] h-[4.8rem] sm:h-[5rem]" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">Market<br/>$95</span>
+                <div class="w-full rounded-t bg-[#8CC6DF]" style="height: 18%;"></div>
               </div>
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">High-end $250</span>
-                <div class="w-8 sm:w-9 rounded-t bg-gray-400 dark:bg-gray-500 h-40" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">High-end<br/>$180</span>
+                <div class="w-full rounded-t bg-[#CFCFD4]" style="height: 30%;"></div>
               </div>
             </div>
-            <div class="flex flex-col items-center mt-2">
-              <span class="font-semibold text-[var(--text-main)] text-sm">Tutoring</span>
-              <span class="text-xs text-[var(--text-muted)] font-normal">$70</span>
+            <div class="flex flex-col items-center mt-3 text-center">
+              <span class="font-bold text-[#3730A3] text-[13px]">Tutoring</span>
+              <span class="text-xs text-[#8B8AA1] font-bold">$70</span>
             </div>
           </div>
-          <!-- Program Insights: $60, $120, $250 -->
+          <!-- Program Insights: $65, $150, $400 -->
           <div class="flex flex-col items-center gap-1 flex-1 min-w-0">
-            <div class="flex items-end justify-center gap-1 sm:gap-2 w-full h-40">
+            <div class="flex items-end justify-center gap-2 sm:gap-3 w-full h-[14rem]">
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">Grads Paths $60</span>
-                <div class="w-8 sm:w-9 rounded-t bg-[var(--secondary)] h-[2.4rem] sm:h-[2.5rem]" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">Grads<br/>Paths $65</span>
+                <div class="w-full rounded-t bg-[#E46FA3]" style="height: 11%;"></div>
               </div>
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">Market $120</span>
-                <div class="w-8 sm:w-9 rounded-t bg-[var(--accent)] h-[4.8rem] sm:h-[5rem]" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">Market<br/>$150</span>
+                <div class="w-full rounded-t bg-[#8CC6DF]" style="height: 25%;"></div>
               </div>
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">High-end $250</span>
-                <div class="w-8 sm:w-9 rounded-t bg-gray-400 dark:bg-gray-500 h-40" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">High-end<br/>$400</span>
+                <div class="w-full rounded-t bg-[#CFCFD4]" style="height: 55%;"></div>
               </div>
             </div>
-            <div class="flex flex-col items-center mt-2">
-              <span class="font-semibold text-[var(--text-main)] text-sm">Program Insights</span>
-              <span class="text-xs text-[var(--text-muted)] font-normal">$60</span>
+            <div class="flex flex-col items-center mt-3 text-center">
+              <span class="font-bold text-[#3730A3] text-[13px]">Program Insights</span>
+              <span class="text-xs text-[#8B8AA1] font-bold">$65</span>
             </div>
           </div>
-          <!-- Application Review -->
+          <!-- Interview Prep: $60, $295, $750 -->
           <div class="flex flex-col items-center gap-1 flex-1 min-w-0">
-            <div class="flex items-end justify-center gap-1 sm:gap-2 w-full h-40">
+            <div class="flex items-end justify-center gap-2 sm:gap-3 w-full h-[14rem]">
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">Grads Paths $60</span>
-                <div class="w-8 sm:w-9 rounded-t bg-[var(--secondary)] h-[2.4rem] sm:h-[2.5rem]" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">Grads<br/>Paths $60</span>
+                <div class="w-full rounded-t bg-[#E46FA3]" style="height: 10%;"></div>
               </div>
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">Market $120</span>
-                <div class="w-8 sm:w-9 rounded-t bg-[var(--accent)] h-[4.8rem] sm:h-[5rem]" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">Market<br/>$295</span>
+                <div class="w-full rounded-t bg-[#8CC6DF]" style="height: 42%;"></div>
               </div>
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">High-end $250</span>
-                <div class="w-8 sm:w-9 rounded-t bg-gray-400 dark:bg-gray-500 h-40" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">High-end<br/>$750</span>
+                <div class="w-full rounded-t bg-[#CFCFD4]" style="height: 100%;"></div>
               </div>
             </div>
-            <div class="flex flex-col items-center mt-2">
-              <span class="font-semibold text-[var(--text-main)] text-sm">Application Review</span>
-              <span class="text-xs text-[var(--text-muted)] font-normal">$60</span>
+            <div class="flex flex-col items-center mt-3 text-center">
+              <span class="font-bold text-[#3730A3] text-[13px]">Interview Prep</span>
+              <span class="text-xs text-[#8B8AA1] font-bold">$60</span>
             </div>
           </div>
-          <!-- Interview Prep: $55, $120, $250 -->
+          <!-- Application Review: $60, $260, $500 -->
           <div class="flex flex-col items-center gap-1 flex-1 min-w-0">
-            <div class="flex items-end justify-center gap-1 sm:gap-2 w-full h-40">
+            <div class="flex items-end justify-center gap-2 sm:gap-3 w-full h-[14rem]">
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">Grads Paths $55</span>
-                <div class="w-8 sm:w-9 rounded-t bg-[var(--secondary)] h-[2.2rem] sm:h-[2.25rem]" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">Grads<br/>Paths $60</span>
+                <div class="w-full rounded-t bg-[#E46FA3]" style="height: 10%;"></div>
               </div>
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">Market $120</span>
-                <div class="w-8 sm:w-9 rounded-t bg-[var(--accent)] h-[4.8rem] sm:h-[5rem]" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">Market<br/>$260</span>
+                <div class="w-full rounded-t bg-[#8CC6DF]" style="height: 38%;"></div>
               </div>
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">High-end $250</span>
-                <div class="w-8 sm:w-9 rounded-t bg-gray-400 dark:bg-gray-500 h-40" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">High-end<br/>$500</span>
+                <div class="w-full rounded-t bg-[#CFCFD4]" style="height: 70%;"></div>
               </div>
             </div>
-            <div class="flex flex-col items-center mt-2">
-              <span class="font-semibold text-[var(--text-main)] text-sm">Interview Prep</span>
-              <span class="text-xs text-[var(--text-muted)] font-normal">$55</span>
+            <div class="flex flex-col items-center mt-3 text-center">
+              <span class="font-bold text-[#3730A3] text-[13px]">Application Review</span>
+              <span class="text-xs text-[#8B8AA1] font-bold">$60</span>
             </div>
           </div>
-          <!-- Gap Year: $40, $120, $250 -->
+          <!-- Gap Year Planning: $40, $125, $275 -->
           <div class="flex flex-col items-center gap-1 flex-1 min-w-0">
-            <div class="flex items-end justify-center gap-1 sm:gap-2 w-full h-40">
+            <div class="flex items-end justify-center gap-2 sm:gap-3 w-full h-[14rem]">
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">Grads Paths $40</span>
-                <div class="w-8 sm:w-9 rounded-t bg-[var(--secondary)] h-[1.6rem] sm:h-[1.75rem]" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">Grads<br/>Paths $40</span>
+                <div class="w-full rounded-t bg-[#E46FA3]" style="height: 8%;"></div>
               </div>
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">Market $120</span>
-                <div class="w-8 sm:w-9 rounded-t bg-[var(--accent)] h-[4.8rem] sm:h-[5rem]" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">Market<br/>$125</span>
+                <div class="w-full rounded-t bg-[#8CC6DF]" style="height: 20%;"></div>
               </div>
               <div class="flex flex-col items-center justify-end gap-1 flex-1 min-w-[2.5rem]">
-                <span class="inline-block px-2 py-1 rounded-md text-[var(--text-main)] text-[10px] sm:text-xs font-medium text-center whitespace-nowrap">High-end $250</span>
-                <div class="w-8 sm:w-9 rounded-t bg-gray-400 dark:bg-gray-500 h-40" aria-hidden="true"></div>
+                <span class="inline-block rounded-md mb-2 text-[#3730A3] text-[10px] sm:text-[11px] font-bold text-center leading-tight">High-end<br/>$275</span>
+                <div class="w-full rounded-t bg-[#CFCFD4]" style="height: 40%;"></div>
               </div>
             </div>
-            <div class="flex flex-col items-center mt-2">
-              <span class="font-semibold text-[var(--text-main)] text-sm">Gap Year</span>
-              <span class="text-xs text-[var(--text-muted)] font-normal">$40</span>
+            <div class="flex flex-col items-center mt-3 text-center">
+              <span class="font-bold text-[#3730A3] text-[13px]">Gap Year Planning</span>
+              <span class="text-xs text-[#8B8AA1] font-bold">$40</span>
             </div>
           </div>
         </div>
-        <p class="text-[var(--text-muted)] text-sm mt-8 max-w-3xl mx-auto text-center">
+        <p class="text-[13px] font-medium text-[#8C5FE2] mt-10 max-w-4xl mx-auto text-center leading-relaxed">
           In premium advising, the hourly price often reflects overhead and packaging. Grads Paths keeps it simple: pay per session, pick the exact service you need, and start with a free consultation to confirm fit.
         </p>
       </div>
@@ -384,48 +374,48 @@
     <section class="rounded-2xl border border-[var(--border)] bg-white dark:bg-[var(--surface)] p-6 sm:p-8 mb-16">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
         <div>
-          <h3 class="text-lg font-bold text-[var(--text-main)] mb-2">Interview Prep</h3>
-          <p class="text-sm text-[var(--text-muted)] mb-3">Mock interviews with targeted feedback, clearer answers, and strategy to improve your overall approach.</p>
-          <ul class="space-y-1 text-sm text-[var(--text-muted)] mb-4">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] text-xs mt-0.5 shrink-0"></i> Mock interviews with targeted feedback</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] text-xs mt-0.5 shrink-0"></i> Clearer, more confident answers</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] text-xs mt-0.5 shrink-0"></i> Strategy to improve your overall approach</li>
+          <h3 class="text-[1.15rem] font-bold text-[#3730A3] tracking-tight mb-2">Interview Prep</h3>
+          <p class="text-[15px] leading-snug text-[#6B7280] mb-3">Mock interviews with targeted feedback, clearer answers, and strategy to improve your overall approach.</p>
+          <ul class="space-y-1 text-sm text-[#71717A] mb-4">
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] text-sm mt-0.5 shrink-0"></i> Mock interviews with targeted feedback</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] text-sm mt-0.5 shrink-0"></i> Clearer, more confident answers</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] text-sm mt-0.5 shrink-0"></i> Strategy to improve your overall approach</li>
           </ul>
           <p class="text-xs text-[var(--text-muted)] italic mb-3">Note: Hiring and admissions outcomes are not guaranteed.</p>
           <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-[var(--primary)]">$55 / 60 min</span>
         </div>
         <div>
-          <h3 class="text-lg font-bold text-[var(--text-main)] mb-2">Application Review</h3>
-          <p class="text-sm text-[var(--text-muted)] mb-3">Line-level edits, stronger narrative structure, and a clear plan for the next revision.</p>
-          <ul class="space-y-1 text-sm text-[var(--text-muted)] mb-4">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] text-xs mt-0.5 shrink-0"></i> Line-level edits and concrete improvements</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] text-xs mt-0.5 shrink-0"></i> Stronger narrative structure and positioning</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] text-xs mt-0.5 shrink-0"></i> A clear plan for the next revision</li>
+          <h3 class="text-[1.15rem] font-bold text-[#3730A3] tracking-tight mb-2">Application Review</h3>
+          <p class="text-[15px] leading-snug text-[#6B7280] mb-3">Line-level edits, stronger narrative structure, and a clear plan for the next revision.</p>
+          <ul class="space-y-1 text-sm text-[#71717A] mb-4">
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] text-sm mt-0.5 shrink-0"></i> Line-level edits and concrete improvements</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] text-sm mt-0.5 shrink-0"></i> Stronger narrative structure and positioning</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] text-sm mt-0.5 shrink-0"></i> A clear plan for the next revision</li>
           </ul>
-          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-[var(--accent)]">$60 / 60 min</span>
+          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-[#1B6DFB]">$60 / 60 min</span>
         </div>
         <div>
-          <h3 class="text-lg font-bold text-[var(--text-main)] mb-2">Gap Year Planning</h3>
-          <p class="text-sm text-[var(--text-muted)] mb-3">Roadmap and timeline tailored to your goals, with profile-building strategy and smarter next-cycle planning.</p>
-          <ul class="space-y-1 text-sm text-[var(--text-muted)] mb-4">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] text-xs mt-0.5 shrink-0"></i> Roadmap and timeline tailored to your goals</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] text-xs mt-0.5 shrink-0"></i> Profile-building strategy with clear priorities</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] text-xs mt-0.5 shrink-0"></i> Smarter next-cycle planning with less guesswork</li>
+          <h3 class="text-[1.15rem] font-bold text-[#3730A3] tracking-tight mb-2">Gap Year Planning</h3>
+          <p class="text-[15px] leading-snug text-[#6B7280] mb-3">Roadmap and timeline tailored to your goals, with profile-building strategy and smarter next-cycle planning.</p>
+          <ul class="space-y-1 text-sm text-[#71717A] mb-4">
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] text-sm mt-0.5 shrink-0"></i> Roadmap and timeline tailored to your goals</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] text-sm mt-0.5 shrink-0"></i> Profile-building strategy with clear priorities</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] text-sm mt-0.5 shrink-0"></i> Smarter next-cycle planning with less guesswork</li>
           </ul>
-          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-[var(--secondary)]">$40 / 60 min</span>
+          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-[#E92E88]">$40 / 60 min</span>
         </div>
-        <div class="rounded-xl border border-[var(--primary)]/30 bg-[var(--primary)]/5 dark:bg-[var(--primary)]/10 p-5">
-          <h3 class="text-lg font-bold text-[var(--text-main)] mb-2">Why we beat high-end competitors</h3>
-          <p class="text-sm text-[var(--text-muted)] mb-4">Transparent pricing, quality mentorship, and no premium overhead. Start with a free consult and only pay for what you need.</p>
-          <ul class="space-y-2 text-sm text-[var(--text-muted)] mb-6">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] shrink-0 mt-0.5"></i> Free 15-minute consultation to confirm fit first</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] shrink-0 mt-0.5"></i> Pay-per-session pricing with no bundles required</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] shrink-0 mt-0.5"></i> Mentors close to the current process for more relevant insight</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[var(--primary)] shrink-0 mt-0.5"></i> Clear next steps after every session</li>
+        <div class="rounded-xl border border-gray-200 bg-white p-5">
+          <h3 class="text-lg font-bold text-[#3730A3] mb-2">Why we beat high-end competitors</h3>
+          <p class="text-[15px] leading-snug text-[#6B7280] mb-4">Transparent pricing, quality mentorship, and no premium overhead. Start with a free consult and only pay for what you need.</p>
+          <ul class="space-y-2 text-sm text-[#71717A] mb-5">
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] text-sm shrink-0 mt-0.5"></i> Free 15-minute consultation to confirm fit first</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] text-sm shrink-0 mt-0.5"></i> Pay-per-session pricing with no bundles required</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] text-sm shrink-0 mt-0.5"></i> Mentors close to the current process for more relevant insight</li>
+            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] text-sm shrink-0 mt-0.5"></i> Clear next steps after every session</li>
           </ul>
           <div class="flex flex-wrap gap-3">
-            <a href="index.html#get-in-touch" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-[var(--secondary)] to-[var(--primary)] hover:opacity-90 transition-opacity">Start free consult</a>
-            <a href="find-mentors.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-[var(--text-main)] border-2 border-[var(--primary)] hover:bg-[var(--primary)]/10 transition-colors">Browse mentors</a>
+            <a href="index.html#get-in-touch" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-white bg-[#E92E88] hover:opacity-90 transition-opacity">Start free consult</a>
+            <a href="find-mentors.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-[#6D28D9] bg-white border-2 border-[#6D28D9] hover:bg-[#6D28D9]/5 transition-colors">Browse mentors</a>
           </div>
         </div>
       </div>
@@ -466,7 +456,7 @@
           <h3 class="footer-col-title">Services</h3>
           <a href="find-mentors.html">Find Mentors</a>
           <a href="index.html#meeting-types">Meeting Types</a>
-          <a href="index.html#programs">Programs Offered</a>
+          <a href="index.html#programs-disciplines">Programs Offered</a>
           <a href="index.html#programs-disciplines">Professional Disciplines</a>
         </div>
         <div class="footer-col">
