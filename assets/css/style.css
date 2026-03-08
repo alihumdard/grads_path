@@ -1,27 +1,27 @@
 /* Grads Paths — Global Design. Clean, premium, minimal. StudentGuided-inspired. No italics. */
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 
-/* Color scheme: Purple, Pink, Blue only */
+/* Color scheme: Graduate Guidance — deep indigo to pink gradient */
 :root {
   --bg: #faf5ff;          /* Light purple background */
   --surface: #f3e8ff;     /* Slightly darker purple surface */
-  --text-main: #2e1065;   /* Deep purple for main text (instead of black) */
-  --text-muted: #6b21a8;  /* Muted purple for secondary text */
+  --text-main: #1e0d4d;   /* Deep indigo for main text */
+  --text-muted: #5B30E5;  /* Indigo accent for muted text */
   --border: #e9d5ff;      /* Light purple border */
-  --primary: #7c3aed;     /* Vivid Purple */
-  --secondary: #db2777;   /* Pink */
-  --accent: #2563eb;      /* Blue */
+  --primary: #5B30E5;     /* Deep indigo (gradient start) */
+  --secondary: #E57CE1;   /* Pinkish-purple (gradient end) */
+  --accent: #8C5FE2;      /* Vibrant purple (Done Right) */
   --white-soft: #faf5ff;
 }
 .dark {
   --bg: #0f0720;          /* Very dark purple bg */
   --surface: #1a1033;     /* Dark purple surface */
   --text-main: #f3e8ff;   /* Light purple for text */
-  --text-muted: #d8b4fe;  /* Muted light purple */
+  --text-muted: #c4b5fd;  /* Muted light purple */
   --border: #4c1d95;      /* Dark purple border */
-  --primary: #a78bfa;     /* Light Purple */
-  --secondary: #f472b6;   /* Light Pink */
-  --accent: #60a5fa;      /* Light Blue */
+  --primary: #8E5EDE;     /* Medium purple */
+  --secondary: #E57CE1;   /* Pinkish-purple */
+  --accent: #8C5FE2;      /* Vibrant purple */
 }
 
 * {
@@ -89,18 +89,18 @@ h6 {
   background-color: var(--bg);
 }
 
-/* Section alternation: light = white, lavender, white, lavender... ; dark = same bg for all */
+/* Section alternation: light = white, lavender, white... matching hero palette */
 .page-section-1 { background-color: #ffffff; }
-.page-section-2 { background-color: #f5f0ff; }
+.page-section-2 { background-color: #f5efff; }
 .page-section-3 { background-color: #ffffff; }
-.page-section-4 { background-color: #f5f0ff; }
+.page-section-4 { background-color: #f5efff; }
 .page-section-5 { background-color: #ffffff; }
-.page-section-6 { background-color: #f5f0ff; }
+.page-section-6 { background-color: #f5efff; }
 .page-section-7 { background-color: #ffffff; }
 
-/* Programs on Grads Paths: purple background, white chart/blocks */
+/* Programs on Grads Paths: white background, purple chart/blocks */
 .programs-chart-section {
-  background-color: #ede9fe;
+  background-color: #ffffff;
 }
 .dark .programs-chart-section {
   background-color: var(--bg);
