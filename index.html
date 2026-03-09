@@ -410,7 +410,7 @@
                   <i class="fa-solid fa-landmark text-[#3A3D43] dark:text-[var(--text-main)] text-lg"></i>
                 </div>
                 <div class="flex flex-col min-w-0">
-                  <span class="text-xs uppercase tracking-wide text-[#5A5E66] dark:text-[var(--text-muted)] font-medium">UPENN</span>
+                  <span class="text-[10px] sm:text-xs truncate block w-full uppercase tracking-wide text-[#5A5E66] dark:text-[var(--text-muted)] font-medium">UPENN</span>
                   <span class="text-base font-bold text-[#3A3D43] dark:text-[var(--text-main)]">Wharton School</span>
                 </div>
               </a>
@@ -421,7 +421,7 @@
                   <i class="fa-solid fa-flask text-[#3A3D43] dark:text-[var(--text-main)] text-lg"></i>
                 </div>
                 <div class="flex flex-col min-w-0">
-                  <span class="text-xs uppercase tracking-wide text-[#5A5E66] dark:text-[var(--text-muted)] font-medium">MIT</span>
+                  <span class="text-[10px] sm:text-xs truncate block w-full uppercase tracking-wide text-[#5A5E66] dark:text-[var(--text-muted)] font-medium">MIT</span>
                   <span class="text-base font-bold text-[#3A3D43] dark:text-[var(--text-main)]">Sloan School</span>
                 </div>
               </a>
@@ -432,7 +432,7 @@
                   <i class="fa-solid fa-graduation-cap text-[#3A3D43] dark:text-[var(--text-main)] text-lg"></i>
                 </div>
                 <div class="flex flex-col min-w-0">
-                  <span class="text-xs uppercase tracking-wide text-[#5A5E66] dark:text-[var(--text-muted)] font-medium">STANFORD</span>
+                  <span class="text-[10px] sm:text-xs truncate block w-full uppercase tracking-wide text-[#5A5E66] dark:text-[var(--text-muted)] font-medium">STANFORD</span>
                   <span class="text-base font-bold text-[#3A3D43] dark:text-[var(--text-main)]">Stanford GSB</span>
                 </div>
               </a>
@@ -443,7 +443,7 @@
                   <i class="fa-solid fa-landmark text-[#3A3D43] dark:text-[var(--text-main)] text-lg"></i>
                 </div>
                 <div class="flex flex-col min-w-0">
-                  <span class="text-xs uppercase tracking-wide text-[#5A5E66] dark:text-[var(--text-muted)] font-medium">HARVARD</span>
+                  <span class="text-[10px] sm:text-xs truncate block w-full uppercase tracking-wide text-[#5A5E66] dark:text-[var(--text-muted)] font-medium">HARVARD</span>
                   <span class="text-base font-bold text-[#3A3D43] dark:text-[var(--text-main)]">Harvard Business</span>
                 </div>
               </a>
@@ -454,7 +454,7 @@
                   <i class="fa-solid fa-building-columns text-[#3A3D43] dark:text-[var(--text-main)] text-lg"></i>
                 </div>
                 <div class="flex flex-col min-w-0">
-                  <span class="text-xs uppercase tracking-wide text-[#5A5E66] dark:text-[var(--text-muted)] font-medium">NORTHWESTERN</span>
+                  <span class="text-[10px] sm:text-xs truncate block w-full uppercase tracking-wide text-[#5A5E66] dark:text-[var(--text-muted)] font-medium">NORTHWESTERN</span>
                   <span class="text-base font-bold text-[#3A3D43] dark:text-[var(--text-main)]">Kellogg School</span>
                 </div>
               </a>
@@ -465,7 +465,7 @@
                   <i class="fa-solid fa-landmark text-[#3A3D43] dark:text-[var(--text-main)] text-lg"></i>
                 </div>
                 <div class="flex flex-col min-w-0">
-                  <span class="text-xs uppercase tracking-wide text-[#5A5E66] dark:text-[var(--text-muted)] font-medium">UCHICAGO</span>
+                  <span class="text-[10px] sm:text-xs truncate block w-full uppercase tracking-wide text-[#5A5E66] dark:text-[var(--text-muted)] font-medium">UCHICAGO</span>
                   <span class="text-base font-bold text-[#3A3D43] dark:text-[var(--text-main)]">Booth School</span>
                 </div>
               </a>
@@ -1685,8 +1685,8 @@
             0–150)</span>
         </div>
 
-        <div id="chart-view-general" class="programs-chart-view">
-          <div class="programs-bar-chart" aria-label="Bar chart: all programs">
+        <div id="chart-view-general" class="programs-chart-view overflow-x-auto pb-4">
+          <div class="programs-bar-chart min-w-[500px]" aria-label="Bar chart: all programs">
             <div class="chart-y-axis">
               <span class="y-axis-label">Amount of Mentors</span>
               <div class="y-ticks">
@@ -1738,8 +1738,8 @@
             Fields</p>
         </div>
 
-        <div id="chart-view-graduate" class="programs-chart-view hidden">
-          <div class="programs-bar-chart" aria-label="Bar chart: graduate programs">
+        <div id="chart-view-graduate" class="programs-chart-view hidden overflow-x-auto pb-4">
+          <div class="programs-bar-chart min-w-[500px]" aria-label="Bar chart: graduate programs">
             <div class="chart-y-axis">
               <span class="y-axis-label">Amount of Mentors</span>
               <div class="y-ticks"><span>150</span><span>100</span><span>50</span><span>0</span></div>
@@ -1773,8 +1773,8 @@
           <p class="chart-x-label text-center text-sm text-gray-500 dark:text-[var(--text-muted)] mt-3">Programs</p>
         </div>
 
-        <div id="chart-view-professionals" class="programs-chart-view hidden">
-          <div class="programs-bar-chart" aria-label="Bar chart: professionals">
+        <div id="chart-view-professionals" class="programs-chart-view hidden overflow-x-auto pb-4">
+          <div class="programs-bar-chart min-w-[500px]" aria-label="Bar chart: professionals">
             <div class="chart-y-axis">
               <span class="y-axis-label">Amount of Mentors</span>
               <div class="y-ticks"><span>150</span><span>100</span><span>50</span><span>0</span></div>
