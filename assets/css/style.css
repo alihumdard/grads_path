@@ -9,7 +9,7 @@
   --text-muted: #5B30E5;  /* Indigo accent for muted text */
   --border: #e9d5ff;      /* Light purple border */
   --primary: #5B30E5;     /* Deep indigo (gradient start) */
-  --secondary: #E57CE1;   /* Pinkish-purple (gradient end) */
+  --secondary: #FE5673;   /* Pinkish-purple (gradient end) */
   --accent: #8C5FE2;      /* Vibrant purple (Done Right) */
   --white-soft: #faf5ff;
 }
@@ -20,7 +20,7 @@
   --text-muted: #c4b5fd;  /* Muted light purple */
   --border: #4c1d95;      /* Dark purple border */
   --primary: #8E5EDE;     /* Medium purple */
-  --secondary: #E57CE1;   /* Pinkish-purple */
+  --secondary: #FE5673;   /* Pinkish-purple */
   --accent: #8C5FE2;      /* Vibrant purple */
 }
 
