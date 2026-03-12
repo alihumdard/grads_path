@@ -39,25 +39,84 @@
 </head>
 
 <body class="antialiased bg-[var(--bg)] text-[var(--text-main)] overflow-x-hidden transition-colors duration-300">
-  <!-- Minimal top strip: logo + actions only (no navbar bar) -->
-  <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-4 flex flex-wrap items-center justify-end gap-4">
-    <div class="flex flex-wrap items-center gap-2" aria-label="Primary">
-      <a href="#pricing"
-        class="inline-flex items-center justify-center px-4 py-2.5 rounded-full text-sm font-bold text-[var(--text-main)] bg-white dark:bg-[var(--surface)] border border-slate-200 dark:border-[var(--border)] hover:border-[var(--primary)]/50 hover:text-[var(--primary)] transition-colors whitespace-nowrap">
-        Pricing
+  <header class="fixed inset-x-0 top-0 z-50 glass h-16 flex items-center transition-all duration-300"
+    aria-label="Main navigation">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between relative h-full">
+      <a href="index.html" class="flex items-center gap-2 shrink-0 z-10" aria-label="Home - Grads Paths">
+        <i class="fa-solid fa-graduation-cap text-black dark:text-white text-2xl"></i>
+        <span class="font-display font-bold text-base tracking-wide text-black dark:text-white whitespace-nowrap">Grads
+          Paths</span>
       </a>
-      <a href="#difference"
-        class="inline-flex items-center justify-center px-4 py-2.5 rounded-full text-sm font-bold text-[var(--text-main)] bg-white dark:bg-[var(--surface)] border border-slate-200 dark:border-[var(--border)] hover:border-[var(--primary)]/50 hover:text-[var(--primary)] transition-colors whitespace-nowrap">
-        Difference
-      </a>
-      <a href="index.html#get-in-touch"
-        class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-[var(--secondary)] to-[var(--primary)] hover:opacity-90 transition-opacity whitespace-nowrap">
-        Book free consult
-      </a>
+
+      <nav
+        class="hidden md:flex items-center gap-6 sm:gap-8 font-bold text-sm absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+        aria-label="Primary">
+        <a href="index.html"
+          class="nav-underline text-[var(--text-main)] hover:text-[var(--primary)] transition-colors whitespace-nowrap">Home</a>
+        <a href="find-mentors.html"
+          class="nav-underline text-[var(--text-main)] hover:text-[var(--primary)] transition-colors whitespace-nowrap">Find
+          Mentors</a>
+        <a href="index.html#how"
+          class="nav-underline text-[var(--text-main)] hover:text-[var(--primary)] transition-colors whitespace-nowrap">How it
+          Works</a>
+        <a href="index.html#why-us"
+          class="nav-underline text-[var(--text-main)] hover:text-[var(--primary)] transition-colors whitespace-nowrap">Why Us</a>
+      </nav>
+
+      <div class="flex items-center gap-3 shrink-0 z-10">
+        <button id="theme-toggle"
+          class="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-surface flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-[var(--primary)] hover:border-[var(--primary)]/40 transition-all"
+          aria-label="Toggle theme">
+          <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9 0 008.354-5.646z" />
+          </svg>
+        </button>
+        <button id="btn-login"
+          class="hidden sm:inline-flex items-center justify-center gap-2 px-7 py-2 rounded-full min-w-[112px] text-sm font-bold text-[#3730A3] bg-white border-2 border-[#6D28D9] hover:bg-[#F3E8FF] transition-all dark:bg-transparent dark:text-white dark:border-white/40 dark:hover:bg-white/10">
+          Login
+        </button>
+        <button id="btn-signup"
+          class="hidden sm:inline-flex items-center justify-center gap-2 px-7 py-2 rounded-full min-w-[124px] text-sm font-bold text-[#3730A3] bg-white border-2 border-[#6D28D9] hover:bg-[#F3E8FF] transition-all dark:bg-transparent dark:text-white dark:border-white/40 dark:hover:bg-white/10">
+          Sign Up
+        </button>
+        <button id="menu-toggle"
+          class="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-slate-300 dark:border-slate-600 text-black dark:text-white"
+          aria-label="Open menu">
+          <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-menu" class="md:hidden fixed top-16 inset-x-0 z-40 hidden">
+    <div class="bg-white dark:bg-surface border-b border-slate-200 dark:border-slate-700 shadow-lg">
+      <nav class="flex flex-col py-2 font-semibold text-sm">
+        <a href="index.html"
+          class="px-6 py-3 text-black dark:text-white hover:bg-slate-100 dark:hover:bg-white/5 nav-underline">Home</a>
+        <a href="find-mentors.html"
+          class="px-6 py-3 text-black dark:text-white hover:bg-slate-100 dark:hover:bg-white/5 nav-underline">Find Mentors</a>
+        <a href="index.html#how"
+          class="px-6 py-3 text-black dark:text-white hover:bg-slate-100 dark:hover:bg-white/5 nav-underline">How it
+          Works</a>
+        <a href="index.html#why-us"
+          class="px-6 py-3 text-black dark:text-white hover:bg-slate-100 dark:hover:bg-white/5 nav-underline">Why
+          Us</a>
+      </nav>
+      <div class="flex gap-3 p-4 border-t border-slate-200 dark:border-slate-700">
+        <button id="btn-login-mob"
+          class="flex-1 py-2.5 rounded-full text-sm font-bold text-[#3730A3] bg-white border-2 border-[#6D28D9] hover:bg-[#F3E8FF] dark:bg-transparent dark:text-white dark:border-white/40 dark:hover:bg-white/10">Login</button>
+        <button id="btn-signup-mob"
+          class="flex-1 py-2.5 rounded-full text-sm font-bold text-[#3730A3] bg-white border-2 border-[#6D28D9] hover:bg-[#F3E8FF] dark:bg-transparent dark:text-white dark:border-white/40 dark:hover:bg-white/10">Sign Up</button>
+      </div>
     </div>
   </div>
 
-  <main class="pb-20 px-4 sm:px-6 max-w-6xl mx-auto overflow-x-hidden">
+  <main class="pt-24 pb-20 px-4 sm:px-6 max-w-6xl mx-auto overflow-x-hidden">
     <!-- Why Grads Paths: two columns - left: heading + content + card, right: 3 boxes aligned with heading -->
     <section class="mb-16 sm:mb-20 flex flex-col items-center mx-auto" id="why-grads">
       <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1D1440] dark:text-white mb-5 tracking-tight text-center">Why Grads Paths</h1>
@@ -86,7 +145,7 @@
         </div>
       </div>
 
-      <div class="rounded-2xl bg-[#FCFBFF] dark:bg-[var(--surface)] border border-[#F2EEFA] dark:border-[var(--border)] p-6 lg:p-8 mt-8 w-full max-w-4xl mx-auto text-left">
+      <div class="rounded-2xl bg-[#FCFBFF] dark:bg-[var(--surface)] border-2 border-[#6D28D9] dark:border-[#9A6FFF] p-6 lg:p-8 mt-8 w-full max-w-4xl mx-auto text-left">
         <div class="flex items-center gap-3 mb-5">
           <span class="inline-flex items-center px-3 py-1 rounded-md text-sm font-bold text-[#E92E88] border border-[#F9A8D4] bg-white dark:bg-[var(--surface)] bg-opacity-80 dark:bg-opacity-100">Free</span>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1D1440] dark:text-white">15-minute consultation</h2>
@@ -249,7 +308,7 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4 max-w-7xl mx-auto">
         <!-- Card 1 -->
-        <div class="bg-white dark:bg-[var(--surface)] rounded-[2rem] p-6 lg:p-8 flex flex-col items-center text-center shadow-sm border border-[#F3E8FF] dark:border-[var(--border)]">
+        <div class="bg-white dark:bg-[var(--surface)] rounded-[2rem] p-6 lg:p-8 flex flex-col items-center text-center shadow-sm border-2 border-blue-500 dark:border-blue-400">
           <div class="w-14 h-14 rounded-2xl bg-[#F5EFFF] dark:bg-white/10 flex items-center justify-center text-[#3730A3] dark:text-white mb-6">
             <i class="fa-solid fa-graduation-cap text-xl"></i>
           </div>
@@ -260,7 +319,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="bg-white dark:bg-[var(--surface)] rounded-[2rem] p-6 lg:p-8 flex flex-col items-center text-center shadow-sm border border-[#F3E8FF] dark:border-[var(--border)]">
+        <div class="bg-white dark:bg-[var(--surface)] rounded-[2rem] p-6 lg:p-8 flex flex-col items-center text-center shadow-sm border-2 border-red-500 dark:border-red-400">
           <div class="w-14 h-14 rounded-2xl bg-[#F5EFFF] dark:bg-white/10 flex items-center justify-center text-[#3730A3] dark:text-white mb-6">
             <i class="fa-solid fa-briefcase text-xl"></i>
           </div>
@@ -271,7 +330,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="bg-white dark:bg-[var(--surface)] rounded-[2rem] p-6 lg:p-8 flex flex-col items-center text-center shadow-sm border border-[#F3E8FF] dark:border-[var(--border)]">
+        <div class="bg-white dark:bg-[var(--surface)] rounded-[2rem] p-6 lg:p-8 flex flex-col items-center text-center shadow-sm border-2 border-purple-500 dark:border-purple-400">
           <div class="w-14 h-14 rounded-2xl bg-[#F5EFFF] dark:bg-white/10 flex items-center justify-center text-[#3730A3] dark:text-white mb-6">
             <i class="fa-solid fa-file-signature text-xl"></i>
           </div>
@@ -282,7 +341,7 @@
         </div>
 
         <!-- Card 4 -->
-        <div class="bg-white dark:bg-[var(--surface)] rounded-[2rem] p-6 lg:p-8 flex flex-col items-center text-center shadow-sm border border-[#F3E8FF] dark:border-[var(--border)]">
+        <div class="bg-white dark:bg-[var(--surface)] rounded-[2rem] p-6 lg:p-8 flex flex-col items-center text-center shadow-sm border-2 border-blue-500 dark:border-blue-400">
           <div class="w-14 h-14 rounded-2xl bg-[#F5EFFF] dark:bg-white/10 flex items-center justify-center text-[#3730A3] dark:text-white mb-6">
             <i class="fa-solid fa-earth-americas text-xl"></i>
           </div>
@@ -388,97 +447,72 @@
         Each service is designed to optimize your preparation, clarity, and strategy. We focus on what students can control: better decisions, stronger materials, and better performance through practice. Outcomes depend on many factors and are never guaranteed.
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div class="rounded-2xl border border-[var(--border)] bg-white dark:bg-[var(--surface)] p-6">
+        <div class="rounded-2xl border-2 border-blue-500 dark:border-blue-400 bg-white dark:bg-[var(--surface)] p-6 shadow-sm">
           <h3 class="text-lg font-bold text-[var(--text-main)] mb-2">Tutoring</h3>
           <p class="text-sm text-[var(--text-muted)] mb-4">High-performance study plans and priorities, with strategy and practice review that targets weak spots.</p>
           <ul class="space-y-2 text-sm text-[var(--text-muted)] mb-4">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[var(--primary)] text-xs mt-1 shrink-0"></i> High-performance study plans and priorities</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[var(--primary)] text-xs mt-1 shrink-0"></i> Strategy + practice review that targets weak spots</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[var(--primary)] text-xs mt-1 shrink-0"></i> Support designed to optimize improvement over time</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> High-performance study plans and priorities</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Strategy + practice review that targets weak spots</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Support designed to optimize improvement over time</li>
           </ul>
           <p class="text-xs text-[var(--text-muted)] italic mb-4">Note: Exam score outcomes are not guaranteed and depend on many factors.</p>
-          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-[var(--secondary)] border-2 border-[var(--secondary)]">$70 / 60 min</span>
+          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-[#E92E88] border-2 border-[#E92E88]">$70 / 60 min</span>
         </div>
-        <div class="rounded-2xl border border-[var(--border)] bg-white dark:bg-[var(--surface)] p-6">
+        <div class="rounded-2xl border-2 border-red-500 dark:border-red-400 bg-white dark:bg-[var(--surface)] p-6 shadow-sm">
           <h3 class="text-lg font-bold text-[var(--text-main)] mb-2">Program Insights</h3>
           <p class="text-sm text-[var(--text-muted)] mb-4">Better program fit and stronger school-list decisions from people who've been there.</p>
           <ul class="space-y-2 text-sm text-[var(--text-muted)] mb-4">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[var(--primary)] text-xs mt-1 shrink-0"></i> Better program fit and stronger school-list decisions</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[var(--primary)] text-xs mt-1 shrink-0"></i> Clarity on day-to-day workload and culture</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[var(--primary)] text-xs mt-1 shrink-0"></i> Insight you can't get from generic guides</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Better program fit and stronger school-list decisions</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Clarity on day-to-day workload and culture</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Insight you can't get from generic guides</li>
           </ul>
-          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-[var(--accent)] border-2 border-[var(--accent)]">$65 / 60 min</span>
+          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-[#6D28D9] border-2 border-[#6D28D9]">$65 / 60 min</span>
         </div>
-        <div class="rounded-2xl border border-[var(--border)] bg-white dark:bg-[var(--surface)] p-6">
+        <div class="rounded-2xl border-2 border-purple-500 dark:border-purple-400 bg-white dark:bg-[var(--surface)] p-6 shadow-sm">
           <h3 class="text-lg font-bold text-[var(--text-main)] mb-2">Interview Prep</h3>
           <p class="text-sm text-[var(--text-muted)] mb-4">Mock interviews with targeted feedback and strategy to improve your overall approach.</p>
           <ul class="space-y-2 text-sm text-[var(--text-muted)] mb-4">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[var(--primary)] text-xs mt-1 shrink-0"></i> Mock interviews with targeted feedback</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[var(--primary)] text-xs mt-1 shrink-0"></i> Clearer, more confident answers</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[var(--primary)] text-xs mt-1 shrink-0"></i> Strategy to improve your overall approach</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Mock interviews with targeted feedback</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Clearer, more confident answers</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Strategy to improve your overall approach</li>
           </ul>
           <p class="text-xs text-[var(--text-muted)] italic mb-4">Note: Hiring and admissions outcomes are not guaranteed.</p>
-          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-[var(--primary)] border-2 border-[var(--primary)]">$60 / 60 min</span>
+          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-[#6D28D9] border-2 border-[#6D28D9]">$60 / 60 min</span>
         </div>
-        <div class="rounded-2xl border border-[var(--border)] bg-white dark:bg-[var(--surface)] p-6">
+        <div class="rounded-2xl border-2 border-blue-500 dark:border-blue-400 bg-white dark:bg-[var(--surface)] p-6 shadow-sm">
           <h3 class="text-lg font-bold text-[var(--text-main)] mb-2">Application Review</h3>
           <p class="text-sm text-[var(--text-muted)] mb-4">Line-level edits and concrete improvements for stronger narrative structure and positioning.</p>
           <ul class="space-y-2 text-sm text-[var(--text-muted)] mb-4">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[var(--primary)] text-xs mt-1 shrink-0"></i> Line-level edits and concrete improvements</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[var(--primary)] text-xs mt-1 shrink-0"></i> Stronger narrative structure and positioning</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[var(--primary)] text-xs mt-1 shrink-0"></i> A clear plan for the next revision</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Line-level edits and concrete improvements</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Stronger narrative structure and positioning</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> A clear plan for the next revision</li>
           </ul>
-          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-[var(--accent)] border-2 border-[var(--accent)]">$60 / 60 min</span>
+          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-[#6D28D9] border-2 border-[#6D28D9]">$60 / 60 min</span>
         </div>
-      </div>
-    </section>
-
-    <!-- 4-card grid: Interview Prep, Application Review, Gap Year, Why we beat high-end -->
-    <section class="rounded-2xl border border-[var(--border)] bg-white dark:bg-[var(--surface)] p-6 sm:p-8 mb-16">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-        <div>
-          <h3 class="text-[1.15rem] font-bold text-[#3730A3] dark:text-white tracking-tight mb-2">Interview Prep</h3>
-          <p class="text-[15px] leading-snug text-[#6B7280] dark:text-[var(--text-muted)] mb-3">Mock interviews with targeted feedback, clearer answers, and strategy to improve your overall approach.</p>
-          <ul class="space-y-1 text-sm text-[#71717A] dark:text-[var(--text-muted)] mb-4">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] dark:text-white/90 text-sm mt-0.5 shrink-0"></i> Mock interviews with targeted feedback</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] dark:text-white/90 text-sm mt-0.5 shrink-0"></i> Clearer, more confident answers</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] dark:text-white/90 text-sm mt-0.5 shrink-0"></i> Strategy to improve your overall approach</li>
+        <div class="rounded-2xl border-2 border-red-500 dark:border-red-400 bg-white dark:bg-[var(--surface)] p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-[var(--text-main)] mb-2">Gap Year Planning</h3>
+          <p class="text-sm text-[var(--text-muted)] mb-4">Roadmap and timeline tailored to your goals, with profile-building strategy and smarter next-cycle planning.</p>
+          <ul class="space-y-2 text-sm text-[var(--text-muted)] mb-4">
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Roadmap and timeline tailored to your goals</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Profile-building strategy with clear priorities</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Smarter next-cycle planning with less guesswork</li>
           </ul>
-          <p class="text-xs text-[var(--text-muted)] italic mb-3">Note: Hiring and admissions outcomes are not guaranteed.</p>
-          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-[var(--primary)]">$60 / 60 min</span>
+          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-[#E92E88] border-2 border-[#E92E88]">$40 / 60 min</span>
         </div>
-        <div>
-          <h3 class="text-[1.15rem] font-bold text-[#3730A3] dark:text-white tracking-tight mb-2">Application Review</h3>
-          <p class="text-[15px] leading-snug text-[#6B7280] dark:text-[var(--text-muted)] mb-3">Line-level edits, stronger narrative structure, and a clear plan for the next revision.</p>
-          <ul class="space-y-1 text-sm text-[#71717A] dark:text-[var(--text-muted)] mb-4">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] dark:text-white/90 text-sm mt-0.5 shrink-0"></i> Line-level edits and concrete improvements</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] dark:text-white/90 text-sm mt-0.5 shrink-0"></i> Stronger narrative structure and positioning</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] dark:text-white/90 text-sm mt-0.5 shrink-0"></i> A clear plan for the next revision</li>
-          </ul>
-          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-[#1B6DFB]">$60 / 60 min</span>
-        </div>
-        <div>
-          <h3 class="text-[1.15rem] font-bold text-[#3730A3] dark:text-white tracking-tight mb-2">Gap Year Planning</h3>
-          <p class="text-[15px] leading-snug text-[#6B7280] dark:text-[var(--text-muted)] mb-3">Roadmap and timeline tailored to your goals, with profile-building strategy and smarter next-cycle planning.</p>
-          <ul class="space-y-1 text-sm text-[#71717A] dark:text-[var(--text-muted)] mb-4">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] dark:text-white/90 text-sm mt-0.5 shrink-0"></i> Roadmap and timeline tailored to your goals</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] dark:text-white/90 text-sm mt-0.5 shrink-0"></i> Profile-building strategy with clear priorities</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] dark:text-white/90 text-sm mt-0.5 shrink-0"></i> Smarter next-cycle planning with less guesswork</li>
-          </ul>
-          <span class="inline-block px-3 py-1.5 rounded-full text-sm font-semibold text-white bg-[#E92E88]">$40 / 60 min</span>
-        </div>
-        <div class="rounded-xl border border-gray-200 dark:border-[var(--border)] bg-white dark:bg-[var(--surface)] p-5">
-          <h3 class="text-lg font-bold text-[#3730A3] dark:text-white mb-2">Why we beat high-end competitors</h3>
-          <p class="text-[15px] leading-snug text-[#6B7280] dark:text-[var(--text-muted)] mb-4">Transparent pricing, quality mentorship, and no premium overhead. Start with a free consult and only pay for what you need.</p>
-          <ul class="space-y-2 text-sm text-[#71717A] dark:text-[var(--text-muted)] mb-5">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] dark:text-white/90 text-sm shrink-0 mt-0.5"></i> Free 15-minute consultation to confirm fit first</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] dark:text-white/90 text-sm shrink-0 mt-0.5"></i> Pay-per-session pricing with no bundles required</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] dark:text-white/90 text-sm shrink-0 mt-0.5"></i> Mentors close to the current process for more relevant insight</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-[#6D28D9] dark:text-white/90 text-sm shrink-0 mt-0.5"></i> Clear next steps after every session</li>
+        <div class="rounded-2xl border-2 border-purple-500 dark:border-purple-400 bg-white dark:bg-[var(--surface)] p-6 shadow-sm">
+          <h3 class="text-lg font-bold text-[var(--text-main)] mb-2">Why we beat high-end competitors</h3>
+          <p class="text-sm text-[var(--text-muted)] mb-4">Transparent pricing, quality mentorship, and no premium overhead. Start with a free consult and only pay for what you need.</p>
+          <ul class="space-y-2 text-sm text-[var(--text-muted)] mb-5">
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Free 15-minute consultation to confirm fit first</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Pay-per-session pricing with no bundles required</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Mentors close to the current process for more relevant insight</li>
+            <li class="flex items-start gap-2"><span class="w-2 h-2 rounded-full bg-[#6D28D9] mt-1.5 shrink-0"></span> Clear next steps after every session</li>
           </ul>
           <div class="flex flex-wrap gap-3">
-            <a href="index.html#get-in-touch" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-white bg-[#E92E88] hover:opacity-90 transition-opacity">Start free consult</a>
-            <a href="find-mentors.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-[#6D28D9] dark:text-white/90 bg-white dark:bg-transparent border-2 border-[#6D28D9] dark:border-white/90 hover:bg-[#6D28D9]/5 dark:hover:bg-white/10 transition-colors">Browse mentors</a>
+            <a href="index.html#get-in-touch"
+              class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-white bg-[#E92E88] hover:opacity-90 transition-opacity">Start free consult</a>
+            <a href="find-mentors.html"
+              class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-[#6D28D9] dark:text-white/90 bg-white dark:bg-transparent border-2 border-[#6D28D9] dark:border-white/90 hover:bg-[#6D28D9]/5 dark:hover:bg-white/10 transition-colors">Browse mentors</a>
           </div>
         </div>
       </div>
@@ -541,6 +575,169 @@
     </div>
     <script>document.getElementById('copyright-year-wu').textContent = new Date().getFullYear();</script>
   </footer>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop">
+    <div class="relative w-full max-w-md rounded-2xl shadow-xl bg-white border-2 border-[#6D28D9] login-modal-panel">
+      <button type="button" id="login-close"
+        class="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full transition-colors text-[#3730A3] hover:bg-black/5"
+        aria-label="Close">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="p-8 relative">
+        <h2 id="dialog-title" class="text-2xl font-bold text-[#3730A3] mb-1">Welcome back</h2>
+        <p class="text-sm text-[#6D28D9] mb-6">Sign in to continue with Grads Paths.</p>
+        <form id="login-form" class="space-y-4">
+          <div>
+            <label for="login-email" class="block text-sm font-semibold text-[#3730A3] mb-1.5">Email</label>
+            <div class="relative flex items-center">
+              <input type="email" name="email" id="login-email" placeholder="you@university.edu"
+                class="w-full rounded-xl border border-[#6D28D9] bg-white px-4 py-3 pl-4 pr-10 text-[#6D28D9] placeholder:text-[#6D28D9]/70 focus:outline-none focus:ring-1 focus:ring-[#6D28D9] text-sm" />
+              <i class="fa-solid fa-envelope absolute right-3 text-[#6D28D9]" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div>
+            <label for="login-password"
+              class="block text-sm font-semibold text-[#3730A3] mb-1.5">Password</label>
+            <div class="relative flex items-center">
+              <input type="password" name="password" id="login-password" placeholder="Your password"
+                class="w-full rounded-xl border border-[#6D28D9] bg-white px-4 py-3 pl-4 pr-16 text-[#6D28D9] placeholder:text-[#6D28D9]/70 focus:outline-none focus:ring-1 focus:ring-[#6D28D9] text-sm" />
+              <i class="fa-solid fa-lock absolute right-9 text-[#6D28D9]" aria-hidden="true"></i>
+              <button type="button" class="password-toggle absolute right-3 text-[#6D28D9] hover:opacity-75"
+                aria-label="Toggle password" data-target="login-password">
+                <i class="fa-solid fa-eye-slash text-sm toggle-icon"></i>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="login-remember" name="remember-me"
+                class="h-4 w-4 rounded border-[#6D28D9] text-[#E92E88] focus:ring-[#E92E88]" />
+              <span class="text-sm font-medium text-[#3730A3]">Remember me</span>
+            </label>
+            <button type="button" class="text-sm font-medium text-[#E92E88] hover:underline">Forgot password?</button>
+          </div>
+          <button type="submit"
+            class="w-full rounded-xl py-3 text-sm font-bold text-white bg-gradient-to-r from-[#8C5FE2] to-[#E57CE1] hover:opacity-90 transition-all mt-6">Continue</button>
+        </form>
+        <p class="mt-5 text-center text-sm text-[#6D28D9]">
+          Don't have an account? <button type="button" id="login-to-signup"
+            class="font-semibold text-[#3730A3] hover:underline">Create account</button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="signup-modal"
+    class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 modal-backdrop overflow-y-auto">
+    <div
+      class="relative w-full max-w-[28rem] my-auto max-h-[calc(100vh-1.5rem)] rounded-2xl bg-white border-2 border-[#6D28D9] shadow-xl flex flex-col">
+      <button type="button" id="signup-close"
+        class="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full transition-colors text-[#3730A3] hover:bg-black/5"
+        aria-label="Close">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="px-6 py-8 pb-6 overflow-y-auto flex-1 min-h-0">
+        <h2 class="text-2xl font-bold text-[#3730A3] mb-2">Create Your Account</h2>
+        <p id="signup-subtitle" class="text-[13px] leading-snug text-[#6D28D9] mb-5">Tell us who you are so we can verify
+          your school and keep this community secure.</p>
+
+        <form id="signup-form" class="space-y-4">
+          <!-- Program Level -->
+          <div>
+            <label class="block text-sm font-bold text-[#1D1440] mb-2">Program level</label>
+            <div class="grid grid-cols-3 gap-3">
+              <button type="button" data-value="Undergrad"
+                class="signup-level flex items-center justify-center gap-1.5 px-2 py-2.5 rounded-xl text-xs font-bold border border-[#6D28D9] bg-[#EBE0F8] text-[#6D28D9]">
+                <i class="fa-solid fa-graduation-cap"></i> Undergrad
+              </button>
+              <button type="button" data-value="Grad"
+                class="signup-level flex items-center justify-center gap-1.5 px-2 py-2.5 rounded-xl text-xs font-bold border border-[#D8B4FE] bg-white text-[#6D28D9] hover:border-[#6D28D9]">
+                <i class="fa-solid fa-graduation-cap"></i> Grad
+              </button>
+              <button type="button" data-value="Professional"
+                class="signup-level flex items-center justify-center gap-1.5 px-2 py-2.5 rounded-xl text-xs font-bold border border-[#D8B4FE] bg-white text-[#6D28D9] hover:border-[#6D28D9]">
+                <i class="fa-solid fa-briefcase"></i> Professional
+              </button>
+            </div>
+          </div>
+          <!-- Role -->
+          <div>
+            <label class="block text-sm font-bold text-[#1D1440] mb-2">I am a:</label>
+            <div class="grid grid-cols-2 gap-3">
+              <button type="button" data-value="Student"
+                class="signup-role flex items-center justify-center gap-2 px-3 py-3 rounded-xl text-sm font-bold border border-[#6D28D9] bg-[#EBE0F8] text-[#6D28D9]">
+                <i class="fa-solid fa-book-open"></i> Student
+              </button>
+              <button type="button" data-value="Mentor"
+                class="signup-role flex items-center justify-center gap-2 px-3 py-3 rounded-xl text-sm font-bold border border-[#D8B4FE] bg-white text-[#6D28D9] hover:border-[#6D28D9]">
+                <i class="fa-solid fa-building-columns"></i> Mentor
+              </button>
+            </div>
+          </div>
+
+          <!-- Full Name -->
+          <div>
+            <label class="block text-xs font-bold text-[#1D1440] mb-1.5">Full name <span
+                class="text-red-500">*</span></label>
+            <div class="relative flex items-center">
+              <input type="text" name="fullname" id="signup-fullname" placeholder="Your name"
+                class="w-full rounded-xl border border-[#6D28D9] bg-white px-3 py-2.5 pl-3 pr-10 text-[#6D28D9] placeholder:text-[#6D28D9]/60 focus:outline-none focus:ring-1 focus:ring-[#6D28D9] text-sm" />
+              <i class="fa-solid fa-user absolute right-3 text-[#6D28D9]" aria-hidden="true"></i>
+            </div>
+          </div>
+          <!-- Email -->
+          <div>
+            <label class="block text-xs font-bold text-[#1D1440] mb-1.5">Email <span
+                class="text-red-500">*</span></label>
+            <div class="relative flex items-center">
+              <input type="email" name="email" id="signup-email" placeholder="you@university.edu"
+                class="w-full rounded-xl border border-[#6D28D9] bg-white px-3 py-2.5 pl-3 pr-10 text-[#6D28D9] placeholder:text-[#6D28D9]/60 focus:outline-none focus:ring-1 focus:ring-[#6D28D9] text-sm" />
+              <i class="fa-solid fa-envelope absolute right-3 text-[#6D28D9]" aria-hidden="true"></i>
+            </div>
+          </div>
+          <!-- Institution -->
+          <div>
+            <label class="block text-xs font-bold text-[#1D1440] mb-1.5">Institution <span
+                class="text-red-500">*</span></label>
+            <div class="relative flex items-center">
+              <input type="text" name="institution" id="signup-institution" placeholder="Start typing to search..."
+                class="w-full rounded-xl border border-[#6D28D9] bg-white px-3 py-2.5 pl-3 pr-10 text-[#6D28D9] placeholder:text-[#6D28D9]/60 focus:outline-none focus:ring-1 focus:ring-[#6D28D9] text-sm" />
+              <i class="fa-solid fa-school absolute right-3 text-[#6D28D9]" aria-hidden="true"></i>
+            </div>
+          </div>
+          <!-- Password -->
+          <div>
+            <label class="block text-xs font-bold text-[#1D1440] mb-1.5">Password <span
+                class="text-red-500">*</span></label>
+            <div class="relative flex items-center">
+              <input type="password" name="password" id="signup-password" placeholder="Create a password"
+                class="w-full rounded-xl border border-[#6D28D9] bg-white px-3 py-2.5 pl-3 pr-16 text-[#6D28D9] placeholder:text-[#6D28D9]/60 focus:outline-none focus:ring-1 focus:ring-[#6D28D9] text-sm" />
+              <i class="fa-solid fa-lock absolute right-9 text-[#6D28D9]" aria-hidden="true"></i>
+              <button type="button" class="password-toggle absolute right-3 text-[#6D28D9] hover:opacity-75"
+                aria-label="Toggle password" data-target="signup-password">
+                <i class="fa-solid fa-eye-slash text-xs toggle-icon"></i>
+              </button>
+            </div>
+          </div>
+
+          <p class="text-[11px] leading-tight text-[#6D28D9]">We may re-verify your email periodically to keep mentors and
+            students real and current.</p>
+          <button type="submit"
+            class="w-full rounded-xl py-3 text-[15px] font-bold text-white bg-gradient-to-r from-[#8C5FE2] to-[#E57CE1] hover:opacity-90 transition-all mt-4">Continue</button>
+        </form>
+        <p class="mt-4 text-center text-sm text-[#6D28D9]">
+          Already have an account? <button type="button" id="signup-to-login"
+            class="font-semibold text-[#1D1440] hover:underline">Log in</button>
+        </p>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/script.js"></script>
   <script src="assets/js/app.js"></script>

@@ -77,7 +77,7 @@ function switchProgramsChart(tabName) {
     colleges: "Colleges",
   };
   tabs.forEach((tab) => {
-    tab.classList.remove("bg-white", "dark:bg-white/10", "text-[var(--primary)]", "dark:text-white", "border-b-2", "border-[var(--primary)]");
+    tab.classList.remove("bg-white", "dark:bg-white/10", "text-[var(--primary)]", "dark:text-white", "border-2", "border-[var(--primary)]");
     tab.classList.add("bg-transparent", "text-[var(--text-main)]", "dark:text-[var(--text-muted)]");
     tab.setAttribute("aria-selected", "false");
   });
@@ -86,7 +86,7 @@ function switchProgramsChart(tabName) {
   const activeView = document.getElementById(`chart-view-${tabName}`);
   if (activeTab) {
     activeTab.classList.remove("bg-transparent", "text-[var(--text-main)]", "dark:text-[var(--text-muted)]");
-    activeTab.classList.add("bg-white", "dark:bg-white/10", "text-[var(--primary)]", "dark:text-white", "border-b-2", "border-[var(--primary)]");
+    activeTab.classList.add("bg-white", "dark:bg-white/10", "text-[var(--primary)]", "dark:text-white", "border-2", "border-[var(--primary)]");
     activeTab.setAttribute("aria-selected", "true");
   }
   if (activeView) activeView.classList.remove("hidden");
