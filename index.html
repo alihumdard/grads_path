@@ -146,7 +146,7 @@
           </button>
           <button
             id="btn-login"
-            class="hidden sm:inline-flex items-center justify-center gap-2 px-7 py-2 rounded-full min-w-[112px] text-sm font-bold text-white bg-gradient-to-r from-[#8C5FE2] to-[#E57CE1] border-2 border-transparent hover:opacity-90 transition-all dark:border-transparent dark:hover:opacity-80"
+            class="hidden sm:inline-flex items-center justify-center gap-2 px-[30px] py-[10px] rounded-full min-w-[112px] text-sm font-bold text-white bg-gradient-to-r from-[#8C5FE2] to-[#E57CE1] hover:opacity-90 transition-all dark:hover:opacity-80"
           >
             Login
           </button>
@@ -197,7 +197,7 @@
         >
           <button
             id="btn-login-mob"
-            class="flex-1 py-2.5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-[#8C5FE2] to-[#E57CE1] border-2 border-transparent hover:opacity-90 transition-all dark:border-transparent dark:hover:opacity-80"
+            class="flex-1 py-[12px] rounded-full text-sm font-bold text-white bg-gradient-to-r from-[#8C5FE2] to-[#E57CE1] hover:opacity-90 transition-all dark:hover:opacity-80"
           >
             Login
           </button>
@@ -665,779 +665,231 @@
         </div>
 
         <div class="flex-1 min-h-0">
-          <div
+                              <div
             id="panel-mba"
             class="program-panel flex flex-col items-center gap-4 sm:gap-6 w-full"
           >
             <div class="max-w-6xl mx-auto w-full px-0 sm:px-4">
-              <div
-                class="mb-4 sm:mb-8 text-center pb-4 sm:pb-8 border-b border-gray-200 dark:border-white/10"
-              >
-                <h3
-                  class="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3"
-                >
-                  Top Tier Programs
+              <div class="mb-4 sm:mb-6 text-center">
+                <h3 class="text-xl sm:text-2xl font-bold tracking-wide text-black dark:text-white mb-2">
+                  MBA Programs
                 </h3>
-                <p
-                  class="text-base text-gray-600 dark:text-white/80 max-w-xl mx-auto leading-relaxed"
-                >
-                  A curated selection of globally recognized institutions,
-                  categorized by prestige and placement power.
+                <p class="text-base text-black dark:text-white max-w-xl mx-auto leading-relaxed">
+                  A curated selection of globally recognized institutions, categorized by prestige and placement power
                 </p>
               </div>
-              <div class="w-full mb-8">
-                <div
-                  class="flex flex-col items-center sm:items-start text-center sm:text-left mb-6"
-                >
-                  <h4
-                    class="text-xl sm:text-2xl font-extrabold text-[#111827] dark:text-white tracking-tight"
-                  >
-                    MBA Elite
-                  </h4>
-                  <div
-                    class="w-12 h-1 bg-[#6D28D9] dark:bg-white/90 rounded-full mt-2 lg:block sm:block hidden"
-                  ></div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 w-full">
+                <!-- MBA Elite -->
+                <div class="group relative rounded-2xl border-2 border-[var(--primary)] bg-white dark:bg-[var(--surface)] p-1 transition-all duration-300 hover:shadow-lg hover:shadow-[var(--primary)]/10">
+                  <div class="h-full rounded-xl bg-white dark:bg-[var(--surface)] p-3 sm:p-4">
+                    <div class="flex flex-col items-center text-center mb-3 border-b border-[var(--border)] pb-2 sm:pb-3">
+                      <h4 class="text-sm sm:text-base font-bold text-black dark:text-[var(--text-main)]">MBA Elite</h4>
+                      <p class="text-[10px] font-bold text-[var(--primary)] tracking-widest uppercase mt-0.5">Top Tier</p>
+                      <div class="w-8 h-8 rounded-full bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)] border border-[var(--primary)]/20 mt-1.5">
+                        <i class="fa-solid fa-trophy text-[10px]"></i>
+                      </div>
+                    </div>
+                    <ul class="space-y-1.5">
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-landmark text-[var(--primary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Wharton School</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-flask text-[var(--primary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Sloan School</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-graduation-cap text-[var(--primary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Stanford GSB</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-building-columns text-[var(--primary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Harvard Business</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-scale-balanced text-[var(--primary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Kellogg School</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-landmark text-[var(--primary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Booth School</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div
-                  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full"
-                >
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-landmark text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
+
+                <!-- MBA Top 25 -->
+                <div class="group relative rounded-2xl border-2 border-[var(--secondary)] bg-white dark:bg-[var(--surface)] p-1 transition-all duration-300 hover:shadow-lg hover:shadow-[var(--secondary)]/10">
+                  <div class="h-full rounded-xl bg-white dark:bg-[var(--surface)] p-3 sm:p-4">
+                    <div class="flex flex-col items-center text-center mb-3 border-b border-[var(--border)] pb-2 sm:pb-3">
+                      <h4 class="text-sm sm:text-base font-bold text-black dark:text-[var(--text-main)]">MBA Top 25</h4>
+                      <p class="text-[10px] font-bold text-[var(--secondary)] tracking-widest uppercase mt-0.5">Highly Ranked</p>
+                      <div class="w-8 h-8 rounded-full bg-[var(--secondary)]/10 flex items-center justify-center text-[var(--secondary)] border border-[var(--secondary)]/20 mt-1.5">
+                        <i class="fa-solid fa-star text-[10px]"></i>
+                      </div>
                     </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >UPENN</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Wharton School</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-flask text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >MIT</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Sloan School</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-graduation-cap text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >STANFORD</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Stanford GSB</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-building-columns text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >HARVARD</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Harvard Business</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-scale-balanced text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >NORTHWESTERN</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Kellogg School</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-landmark text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >UCHICAGO</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Booth School</span
-                      >
-                    </div>
-                  </a>
+                    <ul class="space-y-1.5">
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-landmark text-[var(--secondary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">UNC-Chapel Hill</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-flask text-[var(--secondary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Rice University</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-graduation-cap text-[var(--secondary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">U of Georgia</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-building-columns text-[var(--secondary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">UT-Dallas</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-scale-balanced text-[var(--secondary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Notre Dame</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-landmark text-[var(--secondary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">U of Rochester</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div class="w-full mb-8">
-                <div
-                  class="flex flex-col items-center sm:items-start text-center sm:text-left mb-6"
-                >
-                  <h4
-                    class="text-xl sm:text-2xl font-extrabold text-[#111827] dark:text-white tracking-tight"
-                  >
-                    MBA Top 25
-                  </h4>
-                  <div
-                    class="w-12 h-1 bg-[#6D28D9] dark:bg-white/90 rounded-full mt-2 lg:block sm:block hidden"
-                  ></div>
-                </div>
-                <div
-                  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full"
-                >
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-landmark text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
+
+                <!-- MBA Regional -->
+                <div class="group relative rounded-2xl border-2 border-[var(--accent)] bg-white dark:bg-[var(--surface)] p-1 transition-all duration-300 hover:shadow-lg hover:shadow-[var(--accent)]/10">
+                  <div class="h-full rounded-xl bg-white dark:bg-[var(--surface)] p-3 sm:p-4">
+                    <div class="flex flex-col items-center text-center mb-3 border-b border-[var(--border)] pb-2 sm:pb-3">
+                      <h4 class="text-sm sm:text-base font-bold text-black dark:text-[var(--text-main)]">MBA Regional</h4>
+                      <p class="text-[10px] font-bold text-[var(--accent)] tracking-widest uppercase mt-0.5">Regional Impact</p>
+                      <div class="w-8 h-8 rounded-full bg-[var(--accent)]/10 flex items-center justify-center text-[var(--accent)] border border-[var(--accent)]/20 mt-1.5">
+                        <i class="fa-solid fa-map-location-dot text-[10px]"></i>
+                      </div>
                     </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >UNC</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >UNC-Chapel Hill (Kenan-Flagler)</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-flask text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >RICE</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Rice University (Jones)</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-graduation-cap text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >UGA</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >University of Georgia (Terry)</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-building-columns text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >UT DALLAS</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >UT-Dallas (Jindal)</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-scale-balanced text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >NOTRE DAME</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Notre Dame (Mendoza)</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-landmark text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >ROCHESTER</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >University of Rochester (Simon)</span
-                      >
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="w-full mb-8">
-                <div
-                  class="flex flex-col items-center sm:items-start text-center sm:text-left mb-6"
-                >
-                  <h4
-                    class="text-xl sm:text-2xl font-extrabold text-[#111827] dark:text-white tracking-tight"
-                  >
-                    MBA Regional
-                  </h4>
-                  <div
-                    class="w-12 h-1 bg-[#6D28D9] dark:bg-white/90 rounded-full mt-2 lg:block sm:block hidden"
-                  ></div>
-                </div>
-                <div
-                  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full"
-                >
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-landmark text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >TEXAS A&M</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Texas A&M University (Mays)</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-flask text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >UC IRVINE</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >UC Irvine (Merage)</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-graduation-cap text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >BOSTON COLLEGE</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Boston College (Carroll)</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-building-columns text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >BOSTON UNIV</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Boston University (Questrom)</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-scale-balanced text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >RUTGERS</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Rutgers Univ-Newark/New Brunswick</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-landmark text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >SYRACUSE</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Syracuse University (Whitman)</span
-                      >
-                    </div>
-                  </a>
+                    <ul class="space-y-1.5">
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-landmark text-[var(--accent)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Texas A&M</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-flask text-[var(--accent)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">UC Irvine</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-graduation-cap text-[var(--accent)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Boston College</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-building-columns text-[var(--accent)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Boston U</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-scale-balanced text-[var(--accent)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Rutgers Univ</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-landmark text-[var(--accent)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Syracuse U</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          
           <div
             id="panel-law"
             class="program-panel hidden flex flex-col items-center gap-4 sm:gap-6 w-full"
           >
             <div class="max-w-6xl mx-auto w-full px-0 sm:px-4">
-              <div
-                class="mb-4 sm:mb-8 text-center pb-4 sm:pb-8 border-b border-gray-200 dark:border-white/10"
-              >
-                <h3
-                  class="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3"
-                >
+              <div class="mb-4 sm:mb-6 text-center">
+                <h3 class="text-xl sm:text-2xl font-bold tracking-wide text-black dark:text-white mb-2">
                   Law Programs
                 </h3>
-                <p
-                  class="text-base text-gray-600 dark:text-white/80 max-w-xl mx-auto leading-relaxed"
-                >
-                  A curated selection of globally recognized institutions,
-                  categorized by prestige and placement power.
+                <p class="text-base text-black dark:text-white max-w-xl mx-auto leading-relaxed">
+                  A curated selection of globally recognized institutions, categorized by prestige and placement power
                 </p>
               </div>
-              <div class="w-full mb-8">
-                <div
-                  class="flex flex-col items-center sm:items-start text-center sm:text-left mb-6"
-                >
-                  <h4
-                    class="text-xl sm:text-2xl font-extrabold text-[#111827] dark:text-white tracking-tight"
-                  >
-                    Law Elite
-                  </h4>
-                  <div
-                    class="w-12 h-1 bg-[#6D28D9] dark:bg-white/90 rounded-full mt-2 lg:block sm:block hidden"
-                  ></div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 sm:gap-4 max-w-4xl mx-auto w-full">
+                <!-- Law Elite -->
+                <div class="group relative rounded-2xl border-2 border-[var(--primary)] bg-white dark:bg-[var(--surface)] p-1 transition-all duration-300 hover:shadow-lg hover:shadow-[var(--primary)]/10">
+                  <div class="h-full rounded-xl bg-white dark:bg-[var(--surface)] p-3 sm:p-4">
+                    <div class="flex flex-col items-center text-center mb-3 border-b border-[var(--border)] pb-2 sm:pb-3">
+                      <h4 class="text-sm sm:text-base font-bold text-black dark:text-[var(--text-main)]">Law Elite</h4>
+                      <p class="text-[10px] font-bold text-[var(--primary)] tracking-widest uppercase mt-0.5">Top Tier</p>
+                      <div class="w-8 h-8 rounded-full bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)] border border-[var(--primary)]/20 mt-1.5">
+                        <i class="fa-solid fa-scale-balanced text-[10px]"></i>
+                      </div>
+                    </div>
+                    <ul class="space-y-1.5">
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-landmark text-[var(--primary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Stanford Univ</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-flask text-[var(--primary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Yale Univ</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-graduation-cap text-[var(--primary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">U of Chicago</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-building-columns text-[var(--primary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">U of Virginia</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-scale-balanced text-[var(--primary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">U of Pennsylvania</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-landmark text-[var(--primary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Harvard Univ</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div
-                  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full"
-                >
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-landmark text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
+
+                <!-- Law Top 25 -->
+                <div class="group relative rounded-2xl border-2 border-[var(--secondary)] bg-white dark:bg-[var(--surface)] p-1 transition-all duration-300 hover:shadow-lg hover:shadow-[var(--secondary)]/10">
+                  <div class="h-full rounded-xl bg-white dark:bg-[var(--surface)] p-3 sm:p-4">
+                    <div class="flex flex-col items-center text-center mb-3 border-b border-[var(--border)] pb-2 sm:pb-3">
+                      <h4 class="text-sm sm:text-base font-bold text-black dark:text-[var(--text-main)]">Law Top 25</h4>
+                      <p class="text-[10px] font-bold text-[var(--secondary)] tracking-widest uppercase mt-0.5">Highly Ranked</p>
+                      <div class="w-8 h-8 rounded-full bg-[var(--secondary)]/10 flex items-center justify-center text-[var(--secondary)] border border-[var(--secondary)]/20 mt-1.5">
+                        <i class="fa-solid fa-gavel text-[10px]"></i>
+                      </div>
                     </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >Stanford</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Stanford University</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-flask text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >Yale</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Yale University</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-graduation-cap text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >UChicago</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >University of Chicago</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-building-columns text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >UVA</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >University of Virginia</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-scale-balanced text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >UPenn</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >University of Pennsylvania</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-landmark text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >Harvard</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Harvard University</span
-                      >
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div class="w-full mb-8">
-                <div
-                  class="flex flex-col items-center sm:items-start text-center sm:text-left mb-6"
-                >
-                  <h4
-                    class="text-xl sm:text-2xl font-extrabold text-[#111827] dark:text-white tracking-tight"
-                  >
-                    Law Top 25
-                  </h4>
-                  <div
-                    class="w-12 h-1 bg-[#6D28D9] dark:bg-white/90 rounded-full mt-2 lg:block sm:block hidden"
-                  ></div>
-                </div>
-                <div
-                  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full"
-                >
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-landmark text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >USC</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >University of Southern California (Gould)</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-flask text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >Wake Forest</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Wake Forest University</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-graduation-cap text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >BYU</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Brigham Young University (Clark)</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-building-columns text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >Ohio State</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >Ohio State University (Moritz)</span
-                      >
-                    </div>
-                  </a>
-                  <a
-                    href="find-mentors.html"
-                    class="program-box flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white dark:bg-[var(--surface)] hover:bg-gray-50 dark:hover:bg-white/5 transition-all cursor-pointer border shadow-sm border-gray-200 dark:border-white/10 no-underline hover:-translate-y-1"
-                  >
-                    <div
-                      class="w-12 h-12 shrink-0 rounded-full border border-gray-200 dark:border-white/20 bg-white dark:bg-[var(--surface)] flex items-center justify-center"
-                    >
-                      <i
-                        class="fa-solid fa-scale-balanced text-[#3A3D43] dark:text-white text-lg"
-                      ></i>
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                      <span
-                        class="text-[11px] sm:text-xs truncate block w-full uppercase tracking-widest text-[#6D28D9] dark:text-[var(--text-muted)] font-extrabold mb-0.5"
-                        >Wisconsin</span
-                      >
-                      <span
-                        class="text-xs sm:text-[15px] font-bold text-[#111827] dark:text-white"
-                        >University of Wisconsin-Madison</span
-                      >
-                    </div>
-                  </a>
+                    <ul class="space-y-1.5">
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-landmark text-[var(--secondary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">USC (Gould)</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-flask text-[var(--secondary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Wake Forest U</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-graduation-cap text-[var(--secondary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">BYU (Clark)</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-building-columns text-[var(--secondary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">Ohio State U</span>
+                      </li>
+                      <li class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-white/50 dark:hover:bg-white/5">
+                        <i class="fa-solid fa-scale-balanced text-[var(--secondary)] text-[10px] w-5 text-center shrink-0"></i>
+                        <span class="text-xs sm:text-sm text-[var(--text-main)]">U of Wisconsin</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div
+<div
             id="panel-psych"
             class="program-panel hidden flex flex-col items-center gap-4 sm:gap-6"
           >
@@ -1844,379 +1296,193 @@
     </section>
 
     <section
-      class="w-full py-10 sm:py-14 page-section-3 text-[var(--text-main)] transition-colors duration-300"
-      id="how"
-    >
-      <div class="max-w-[1140px] mx-auto px-4 sm:px-6 text-center">
-        <h2
-          class="mb-4 text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--text-main)]"
-        >
-          How It Works
-        </h2>
-        <p
-          class="max-w-2xl mx-auto mb-10 text-base lg:text-lg leading-relaxed text-[var(--text-main)] font-medium"
-        >
-          Six simple steps to bridge the gap between curiosity and your dream
-          grad school
-        </p>
+  class="w-full py-10 sm:py-14 page-section-3 text-[var(--text-main)] transition-colors duration-300"
+  id="how"
+>
+  <div class="max-w-[1300px] mx-auto px-4 sm:px-6 text-center">
+    <h2 class="mb-4 text-2xl sm:text-3xl md:text-4xl font-bold">
+      How It Works
+    </h2>
 
-        <div
-          class="rounded-3xl border-2 border-[var(--border)] dark:border-white/10 p-4 sm:p-6 lg:p-8 bg-transparent"
-        >
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 items-stretch mt-2 max-w-6xl mx-auto"
-          >
-            <article class="flex flex-col h-full group">
-              <div
-                class="mx-auto w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center bg-[var(--primary)]/10 relative z-10 transition-transform duration-300 group-hover:-translate-y-2"
-              >
-                <i
-                  class="fa-solid fa-user-plus text-2xl sm:text-3xl text-[var(--primary)]"
-                ></i>
-              </div>
-              <div
-                class="relative flex flex-col flex-grow text-left bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-5 sm:p-6 lg:p-8 pt-8 sm:pt-10 -mt-10 transition-all duration-300"
-              >
-                <div
-                  class="absolute -top-[22px] left-4 sm:left-6 w-12 h-12 sm:w-[50px] sm:h-[50px] rounded-full bg-[var(--primary)] flex items-center justify-center text-white font-bold text-base sm:text-lg"
-                >
-                  01
-                </div>
-                <h3
-                  class="mt-5 sm:mt-6 mb-2 sm:mb-3 text-xl sm:text-2xl font-bold text-center text-black dark:text-white group-hover:text-[var(--primary)] transition-colors"
-                >
-                  Create your account
-                </h3>
-                <p
-                  class="mb-10 text-base leading-relaxed text-black dark:text-white text-center font-normal"
-                >
-                  Get started by creating your Grads Paths account. Sign up,
-                  verify your information, and join a trusted community built on
-                  privacy, accuracy, and real mentor connections.
-                </p>
-                <ul class="space-y-3 mt-auto pl-2">
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--primary)] mt-1 shrink-0"
-                    ></i>
-                    <span>Sign up with ease</span>
-                  </li>
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--primary)] mt-1 shrink-0"
-                    ></i>
-                    <span>Join a secure platform</span>
-                  </li>
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--primary)] mt-1 shrink-0"
-                    ></i>
-                    <span>Connect with real mentors</span>
-                  </li>
-                </ul>
-              </div>
-            </article>
+    <p class="max-w-2xl mx-auto mb-10 text-base lg:text-lg leading-relaxed font-medium">
+      Six simple steps to bridge the gap between curiosity and your dream grad school
+    </p>
 
-            <article class="flex flex-col h-full group">
-              <div
-                class="mx-auto w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center bg-[var(--secondary)]/10 relative z-10 transition-transform duration-300 group-hover:-translate-y-2"
-              >
-                <i
-                  class="fa-solid fa-users-viewfinder text-2xl sm:text-3xl text-[var(--secondary)]"
-                ></i>
-              </div>
-              <div
-                class="relative flex flex-col flex-grow text-left bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-5 sm:p-6 lg:p-8 pt-8 sm:pt-10 -mt-10 transition-all duration-300"
-              >
-                <div
-                  class="absolute -top-[22px] left-4 sm:left-6 w-12 h-12 sm:w-[50px] sm:h-[50px] rounded-full bg-[var(--secondary)] flex items-center justify-center text-white font-bold text-base sm:text-lg"
-                >
-                  02
-                </div>
-                <h3
-                  class="mt-5 sm:mt-6 mb-2 sm:mb-3 text-xl sm:text-2xl font-bold text-center text-black dark:text-white group-hover:text-[var(--secondary)] transition-colors"
-                >
-                  Find the Right Mentor
-                </h3>
-                <p
-                  class="mb-10 text-base leading-relaxed text-black dark:text-white text-center font-normal"
-                >
-                  Meet with graduate mentors or professionals from a wide range
-                  of disciplines and backgrounds. Every time you connect with a
-                  new mentor, you'll begin with a free 15-minute consultation to
-                  explore different perspectives and ensure the right fit for
-                  your goals and academic path.
-                </p>
-                <ul class="space-y-3 mt-auto pl-2">
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--secondary)] mt-1 shrink-0"
-                    ></i>
-                    <span
-                      >Free 15-minute consultation with every new mentor</span
-                    >
-                  </li>
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--secondary)] mt-1 shrink-0"
-                    ></i>
-                    <span>Diverse academic backgrounds</span>
-                  </li>
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--secondary)] mt-1 shrink-0"
-                    ></i>
-                    <span>Mentors from top universities</span>
-                  </li>
-                </ul>
-              </div>
-            </article>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
 
-            <article class="flex flex-col h-full group">
-              <div
-                class="mx-auto w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center bg-[var(--accent)]/10 relative z-10 transition-transform duration-300 group-hover:-translate-y-2"
-              >
-                <i
-                  class="fa-regular fa-calendar-check text-2xl sm:text-3xl text-[var(--accent)]"
-                ></i>
-              </div>
-              <div
-                class="relative flex flex-col flex-grow text-left bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-5 sm:p-6 lg:p-8 pt-8 sm:pt-10 -mt-10 transition-all duration-300"
-              >
-                <div
-                  class="absolute -top-[22px] left-4 sm:left-6 w-12 h-12 sm:w-[50px] sm:h-[50px] rounded-full bg-[var(--accent)] flex items-center justify-center text-white font-bold text-base sm:text-lg"
-                >
-                  03
-                </div>
-                <h3
-                  class="mt-5 sm:mt-6 mb-2 sm:mb-3 text-xl sm:text-2xl font-bold text-center text-black dark:text-white group-hover:text-[var(--accent)] transition-colors"
-                >
-                  Book Your Session
-                </h3>
-                <p
-                  class="mb-10 text-base leading-relaxed text-black dark:text-white text-center font-normal"
-                >
-                  Once you find the right mentor and have chosen the service you
-                  want, book your session at a time that works best for you.
-                  With flexible scheduling and easy booking, you can get started
-                  on the right path with confidence.
-                </p>
-                <ul class="space-y-3 mt-auto pl-2">
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--accent)] mt-1 shrink-0"
-                    ></i>
-                    <span>Ease of scheduling</span>
-                  </li>
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--accent)] mt-1 shrink-0"
-                    ></i>
-                    <span>Automated reminders</span>
-                  </li>
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--accent)] mt-1 shrink-0"
-                    ></i>
-                    <span>Direct calendar sync</span>
-                  </li>
-                </ul>
-              </div>
-            </article>
+      <!-- STEP 1 -->
+      <article class="flex flex-col h-full group">
+        <div class="relative flex flex-col h-full bg-[var(--surface)] rounded-2xl border-2 border-blue-500 p-6 lg:p-8 transition-all duration-300 hover:shadow-xl">
 
-            <article class="flex flex-col h-full group">
-              <div
-                class="mx-auto w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center bg-[var(--primary)]/10 relative z-10 transition-transform duration-300 group-hover:-translate-y-2"
-              >
-                <i
-                  class="fa-solid fa-credit-card text-2xl sm:text-3xl text-[var(--primary)]"
-                ></i>
-              </div>
-              <div
-                class="relative flex flex-col flex-grow text-left bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-5 sm:p-6 lg:p-8 pt-8 sm:pt-10 -mt-10 transition-all duration-300"
-              >
-                <div
-                  class="absolute -top-[22px] left-4 sm:left-6 w-12 h-12 sm:w-[50px] sm:h-[50px] rounded-full bg-[var(--primary)] flex items-center justify-center text-white font-bold text-base sm:text-lg"
-                >
-                  04
-                </div>
-                <h3
-                  class="mt-5 sm:mt-6 mb-2 sm:mb-3 text-xl sm:text-2xl font-bold text-center text-black dark:text-white group-hover:text-[var(--primary)] transition-colors"
-                >
-                  Secure Payment
-                </h3>
-                <p
-                  class="mb-10 text-base leading-relaxed text-black dark:text-white text-center font-normal"
-                >
-                  Complete your payment to confirm your session. Once payment is
-                  processed, your meeting is created and you'll be ready to meet
-                  with your mentor.
-                </p>
-                <ul class="space-y-3 mt-auto pl-2">
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--primary)] mt-1 shrink-0"
-                    ></i>
-                    <span>Encrypted transactions</span>
-                  </li>
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--primary)] mt-1 shrink-0"
-                    ></i>
-                    <span>No hidden fees</span>
-                  </li>
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--primary)] mt-1 shrink-0"
-                    ></i>
-                    <span>Satisfaction guarantee</span>
-                  </li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="flex flex-col h-full group">
-              <div
-                class="mx-auto w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center bg-[var(--secondary)]/10 relative z-10 transition-transform duration-300 group-hover:-translate-y-2"
-              >
-                <i
-                  class="fa-solid fa-video text-2xl sm:text-3xl text-[var(--secondary)]"
-                ></i>
-              </div>
-              <div
-                class="relative flex flex-col flex-grow text-left bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-5 sm:p-6 lg:p-8 pt-8 sm:pt-10 -mt-10 transition-all duration-300"
-              >
-                <div
-                  class="absolute -top-[22px] left-4 sm:left-6 w-12 h-12 sm:w-[50px] sm:h-[50px] rounded-full bg-[var(--secondary)] flex items-center justify-center text-white font-bold text-base sm:text-lg"
-                >
-                  05
-                </div>
-                <h3
-                  class="mt-5 sm:mt-6 mb-2 sm:mb-3 text-xl sm:text-2xl font-bold text-center text-black dark:text-white group-hover:text-[var(--secondary)] transition-colors"
-                >
-                  Attend the Session
-                </h3>
-                <p
-                  class="mb-10 text-base leading-relaxed text-black dark:text-white text-center font-normal"
-                >
-                  Meet with your mentor on Zoom and focus on what matters most.
-                  Your session can be recorded so you can revisit key advice and
-                  insights anytime.
-                </p>
-                <ul class="space-y-3 mt-auto pl-2">
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--secondary)] mt-1 shrink-0"
-                    ></i>
-                    <span>Video call link provided</span>
-                  </li>
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--secondary)] mt-1 shrink-0"
-                    ></i>
-                    <span>Structured session format</span>
-                  </li>
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--secondary)] mt-1 shrink-0"
-                    ></i>
-                    <span>Actionable takeaways</span>
-                  </li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="flex flex-col h-full group">
-              <div
-                class="mx-auto w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center bg-[var(--accent)]/10 relative z-10 transition-transform duration-300 group-hover:-translate-y-2"
-              >
-                <i
-                  class="fa-solid fa-star text-2xl sm:text-3xl text-[var(--accent)]"
-                ></i>
-              </div>
-              <div
-                class="relative flex flex-col flex-grow text-left bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-5 sm:p-6 lg:p-8 pt-8 sm:pt-10 -mt-10 transition-all duration-300"
-              >
-                <div
-                  class="absolute -top-[22px] left-4 sm:left-6 w-12 h-12 sm:w-[50px] sm:h-[50px] rounded-full bg-[var(--accent)] flex items-center justify-center text-white font-bold text-base sm:text-lg"
-                >
-                  06
-                </div>
-                <h3
-                  class="mt-5 sm:mt-6 mb-2 sm:mb-3 text-xl sm:text-2xl font-bold text-center text-black dark:text-white group-hover:text-[var(--accent)] transition-colors"
-                >
-                  Rate and Review
-                </h3>
-                <p
-                  class="mb-10 text-base leading-relaxed text-black dark:text-white text-center font-normal"
-                >
-                  After your session, share a review of your mentor. Your
-                  feedback is taken into account to help mentors refine their
-                  approach and gives future students helpful insight. Reviews
-                  are visible in the feedback section of mentor's dashboard.
-                </p>
-                <ul class="space-y-3 mt-auto pl-2">
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--accent)] mt-1 shrink-0"
-                    ></i>
-                    <span>Share your experience</span>
-                  </li>
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--accent)] mt-1 shrink-0"
-                    ></i>
-                    <span>Help future students</span>
-                  </li>
-                  <li
-                    class="flex items-start gap-3 text-sm text-[var(--text-main)] font-normal"
-                  >
-                    <i
-                      class="fa-solid fa-check text-[var(--accent)] mt-1 shrink-0"
-                    ></i>
-                    <span>Build the community</span>
-                  </li>
-                </ul>
-              </div>
-            </article>
+          <!-- Step Number -->
+          <div class="absolute top-4 left-4 w-10 h-10 rounded-full bg-[var(--primary)] flex items-center justify-center text-white font-bold text-sm">
+            01
           </div>
+
+          <!-- Icon -->
+          <div class="mx-auto mt-6 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center bg-[var(--primary)]/10 transition-transform duration-300 group-hover:-translate-y-1">
+            <i class="fa-solid fa-user-plus text-2xl sm:text-3xl text-[var(--primary)]"></i>
+          </div>
+
+          <h3 class="mt-4 mb-3 text-xl sm:text-2xl font-bold text-center group-hover:text-[var(--primary)]">
+            Create your account
+          </h3>
+
+          <p class="mb-6 text-base text-center">
+            Get started by creating your Grads Paths account. Sign up, verify your information, and join a trusted community.
+          </p>
+
+          <ul class="space-y-3 mt-auto text-sm">
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--primary)]"></i><span>Sign up with ease</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--primary)]"></i><span>Secure platform</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--primary)]"></i><span>Real mentors</span></li>
+          </ul>
         </div>
-      </div>
-    </section>
+      </article>
+
+      <!-- STEP 2 -->
+      <article class="flex flex-col h-full group">
+        <div class="relative flex flex-col h-full bg-[var(--surface)] rounded-2xl border-2 border-red-500 p-6 lg:p-8 transition-all duration-300 hover:shadow-xl">
+
+          <div class="absolute top-4 left-4 w-10 h-10 rounded-full bg-[var(--secondary)] flex items-center justify-center text-white font-bold text-sm">
+            02
+          </div>
+
+          <div class="mx-auto mt-6 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center bg-[var(--secondary)]/10 group-hover:-translate-y-1 transition">
+            <i class="fa-solid fa-users-viewfinder text-2xl sm:text-3xl text-[var(--secondary)]"></i>
+          </div>
+
+          <h3 class="mt-4 mb-3 text-xl sm:text-2xl font-bold text-center group-hover:text-[var(--secondary)]">
+            Find the Right Mentor
+          </h3>
+
+          <p class="mb-6 text-base text-center">
+            Connect with mentors and explore different perspectives with a free consultation.
+          </p>
+
+          <ul class="space-y-3 mt-auto text-sm">
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--secondary)]"></i><span>Free consultation</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--secondary)]"></i><span>Diverse backgrounds</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--secondary)]"></i><span>Top universities</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- STEP 3 -->
+      <article class="flex flex-col h-full group">
+        <div class="relative flex flex-col h-full bg-[var(--surface)] rounded-2xl border-2 border-purple-500 p-6 lg:p-8 transition-all duration-300 hover:shadow-xl">
+
+          <div class="absolute top-4 left-4 w-10 h-10 rounded-full bg-[var(--accent)] flex items-center justify-center text-white font-bold text-sm">
+            03
+          </div>
+
+          <div class="mx-auto mt-6 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center bg-[var(--accent)]/10 group-hover:-translate-y-1 transition">
+            <i class="fa-regular fa-calendar-check text-2xl sm:text-3xl text-[var(--accent)]"></i>
+          </div>
+
+          <h3 class="mt-4 mb-3 text-xl sm:text-2xl font-bold text-center group-hover:text-[var(--accent)]">
+            Book Your Session
+          </h3>
+
+          <p class="mb-6 text-base text-center">
+            Choose your mentor and schedule your session easily with flexible timing.
+          </p>
+
+          <ul class="space-y-3 mt-auto text-sm">
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--accent)]"></i><span>Easy scheduling</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--accent)]"></i><span>Reminders</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--accent)]"></i><span>Calendar sync</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- STEP 4 -->
+      <article class="flex flex-col h-full group">
+        <div class="relative flex flex-col h-full bg-[var(--surface)] rounded-2xl border-2 border-blue-500 p-6 lg:p-8 transition-all duration-300 hover:shadow-xl">
+
+          <div class="absolute top-4 left-4 w-10 h-10 rounded-full bg-[var(--primary)] flex items-center justify-center text-white font-bold text-sm">
+            04
+          </div>
+
+          <div class="mx-auto mt-6 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center bg-[var(--primary)]/10 group-hover:-translate-y-1 transition">
+            <i class="fa-solid fa-credit-card text-2xl sm:text-3xl text-[var(--primary)]"></i>
+          </div>
+
+          <h3 class="mt-4 mb-3 text-xl sm:text-2xl font-bold text-center group-hover:text-[var(--primary)]">
+            Secure Payment
+          </h3>
+
+          <p class="mb-6 text-base text-center">
+            Complete your payment securely and confirm your session instantly.
+          </p>
+
+          <ul class="space-y-3 mt-auto text-sm">
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--primary)]"></i><span>Encrypted payments</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--primary)]"></i><span>No hidden fees</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--primary)]"></i><span>Guarantee</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- STEP 5 -->
+      <article class="flex flex-col h-full group">
+        <div class="relative flex flex-col h-full bg-[var(--surface)] rounded-2xl border-2 border-red-500 p-6 lg:p-8 transition-all duration-300 hover:shadow-xl">
+
+          <div class="absolute top-4 left-4 w-10 h-10 rounded-full bg-[var(--secondary)] flex items-center justify-center text-white font-bold text-sm">
+            05
+          </div>
+
+          <div class="mx-auto mt-6 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center bg-[var(--secondary)]/10 group-hover:-translate-y-1 transition">
+            <i class="fa-solid fa-video text-2xl sm:text-3xl text-[var(--secondary)]"></i>
+          </div>
+
+          <h3 class="mt-4 mb-3 text-xl sm:text-2xl font-bold text-center group-hover:text-[var(--secondary)]">
+            Attend the Session
+          </h3>
+
+          <p class="mb-6 text-base text-center">
+            Join your mentor session and gain valuable insights and guidance.
+          </p>
+
+          <ul class="space-y-3 mt-auto text-sm">
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--secondary)]"></i><span>Video call</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--secondary)]"></i><span>Structured format</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--secondary)]"></i><span>Takeaways</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- STEP 6 -->
+      <article class="flex flex-col h-full group">
+        <div class="relative flex flex-col h-full bg-[var(--surface)] rounded-2xl border-2 border-purple-500 p-6 lg:p-8 transition-all duration-300 hover:shadow-xl">
+
+          <div class="absolute top-4 left-4 w-10 h-10 rounded-full bg-[var(--accent)] flex items-center justify-center text-white font-bold text-sm">
+            06
+          </div>
+
+          <div class="mx-auto mt-6 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center bg-[var(--accent)]/10 group-hover:-translate-y-1 transition">
+            <i class="fa-solid fa-star text-2xl sm:text-3xl text-[var(--accent)]"></i>
+          </div>
+
+          <h3 class="mt-4 mb-3 text-xl sm:text-2xl font-bold text-center group-hover:text-[var(--accent)]">
+            Rate and Review
+          </h3>
+
+          <p class="mb-6 text-base text-center">
+            Share your feedback and help others choose the right mentor.
+          </p>
+
+          <ul class="space-y-3 mt-auto text-sm">
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--accent)]"></i><span>Share experience</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--accent)]"></i><span>Help students</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--accent)]"></i><span>Build community</span></li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
     <section
       class="w-full py-8 sm:py-10 page-section-4 text-[var(--text-main)] transition-colors duration-300"
