@@ -163,9 +163,8 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("gradpaths_signed_in", "1");
       const loginModal = document.getElementById("login-modal");
       if (loginModal) loginModal.classList.add("hidden");
-      if (typeof window.gradpathsUpdateContactSection === "function") {
-        window.gradpathsUpdateContactSection();
-      }
+      // Redirect to dashboard
+      window.location.href = 'https://gradspath-dashboard.vercel.app';
       // Backend would handle actual login here
     });
   }
@@ -220,7 +219,85 @@ document.addEventListener("DOMContentLoaded", () => {
         );
       const signupModal = document.getElementById("signup-modal");
       if (signupModal) signupModal.classList.add("hidden");
-      // Backend would handle actual signup here
+            window.location.href = 'https://gradspath-dashboard.vercel.app';
+    });
+  }
+
+  // Institution autocomplete functionality
+  let universitiesData = [];
+  const institutionInput = document.getElementById("signup-institution");
+  const suggestionsContainer = document.getElementById("institution-suggestions");
+
+  // Fetch universities from GitHub
+  async function fetchUniversities() {
+    try {
+      const response = await fetch("https://raw.githubusercontent.com/Hipo/university-domains-list/refs/heads/master/world_universities_and_domains.json");
+      if (response.ok) {
+        universitiesData = await response.json();
+      }
+    } catch (error) {
+      console.log("Could not fetch universities list:", error);
+    }
+  }
+
+  // Initialize universities data
+  fetchUniversities();
+
+  // Filter and display suggestions
+  function showSuggestions(query) {
+    if (!query || query.length < 2) {
+      suggestionsContainer.classList.add("hidden");
+      return;
+    }
+
+    const filtered = universitiesData.filter((uni) =>
+      uni.name.toLowerCase().includes(query.toLowerCase())
+    ).slice(0, 10); // Show max 10 suggestions
+
+    if (filtered.length === 0) {
+      suggestionsContainer.innerHTML = '<div class="p-3 text-sm text-[#6D28D9]">No universities found</div>';
+      suggestionsContainer.classList.remove("hidden");
+      return;
+    }
+
+    suggestionsContainer.innerHTML = filtered
+      .map((uni) => `
+        <div class="p-3 cursor-pointer hover:bg-[#f5efff] border-b border-[#E9D5FF] last:border-b-0 text-sm text-[#6D28D9]">
+          <div class="font-semibold">${uni.name}</div>
+          <div class="text-xs text-[#9A7FD9]">${uni.country}${uni["state-province"] ? ", " + uni["state-province"] : ""}</div>
+        </div>
+      `)
+      .join("");
+
+    suggestionsContainer.classList.remove("hidden");
+
+    // Add click handlers to suggestions
+    document.querySelectorAll("#institution-suggestions > div").forEach((el, index) => {
+      el.addEventListener("click", () => {
+        institutionInput.value = filtered[index].name;
+        suggestionsContainer.classList.add("hidden");
+      });
+    });
+  }
+
+  // Input event listener
+  if (institutionInput) {
+    institutionInput.addEventListener("input", (e) => {
+      showSuggestions(e.target.value);
+    });
+
+    // Hide suggestions when clicking outside
+    document.addEventListener("click", (e) => {
+      if (e.target !== institutionInput && !suggestionsContainer.contains(e.target)) {
+        suggestionsContainer.classList.add("hidden");
+      }
+    });
+
+    // Show suggestions on focus if there's a value
+    institutionInput.addEventListener("focus", () => {
+      if (institutionInput.value.length >= 2) {
+        showSuggestions(institutionInput.value);
+      }
     });
   }
 });
