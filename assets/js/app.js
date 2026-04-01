@@ -161,10 +161,24 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem("gradspaths_remember_email");
       }
       localStorage.setItem("gradpaths_signed_in", "1");
+      if (loginEmail) {
+        document.cookie = `gradspaths_signed_in=1; path=/; max-age=${60 * 60 * 24 * 30}; SameSite=Strict`; // 30 days
+        document.cookie = `gradspaths_user_email=${encodeURIComponent(loginEmail.value)}; path=/; max-age=${60 * 60 * 24 * 30}; SameSite=Strict`;
+      }
       const loginModal = document.getElementById("login-modal");
       if (loginModal) loginModal.classList.add("hidden");
-      // Redirect to dashboard
-      window.location.href = 'https://gradspath-dashboard.vercel.app';
+      // Update UI state without redirect
+      if (window.gradpathsUpdateAuthButtons) {
+        window.gradpathsUpdateAuthButtons();
+      } else {
+        window.addEventListener(
+          "gradpathsUpdateAuthButtonsReady",
+          function () {
+            if (window.gradpathsUpdateAuthButtons) window.gradpathsUpdateAuthButtons();
+          },
+          { once: true }
+        );
+      }
       // Backend would handle actual login here
     });
   }
@@ -179,7 +193,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   if (signupEmail && localStorage.getItem("gradspaths_signup_email")) {
     signupEmail.value = localStorage.getItem("gradspaths_signup_email");
+
   }
+
   if (
     signupInstitution &&
     localStorage.getItem("gradspaths_signup_institution")
@@ -188,8 +204,10 @@ document.addEventListener("DOMContentLoaded", () => {
       "gradspaths_signup_institution",
     );
   }
+
   const savedLevel = localStorage.getItem("gradspaths_signup_level");
   const savedRole = localStorage.getItem("gradspaths_signup_role");
+
   if (savedLevel) {
     const levelBtn = document.querySelector(
       '.signup-level[data-value="' + savedLevel + '"]',
@@ -217,9 +235,25 @@ document.addEventListener("DOMContentLoaded", () => {
           "gradspaths_signup_institution",
           signupInstitution.value,
         );
+      localStorage.setItem("gradpaths_signed_in", "1");
+      if (signupEmail) {
+        document.cookie = `gradspaths_signed_in=1; path=/; max-age=${60 * 60 * 24 * 30}; SameSite=Strict`;
+        document.cookie = `gradspaths_user_email=${encodeURIComponent(signupEmail.value)}; path=/; max-age=${60 * 60 * 24 * 30}; SameSite=Strict`;
+      }
       const signupModal = document.getElementById("signup-modal");
       if (signupModal) signupModal.classList.add("hidden");
-            window.location.href = 'https://gradspath-dashboard.vercel.app';
+      // Update UI state without redirect
+      if (window.gradpathsUpdateAuthButtons) {
+        window.gradpathsUpdateAuthButtons();
+      } else {
+        window.addEventListener(
+          "gradpathsUpdateAuthButtonsReady",
+          function () {
+            if (window.gradpathsUpdateAuthButtons) window.gradpathsUpdateAuthButtons();
+          },
+          { once: true }
+        );
+      }
     });
   }
 

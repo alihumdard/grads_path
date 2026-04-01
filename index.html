@@ -94,11 +94,11 @@
             class="nav-underline text-[var(--text-main)] hover:text-[var(--primary)] transition-colors whitespace-nowrap"
             >Home</a
           >
-          <a
+          <!-- <a
             href="find-mentors.html"
             class="nav-underline text-[var(--text-main)] hover:text-[var(--primary)] transition-colors whitespace-nowrap"
             >Find Mentors</a
-          >
+          > -->
           <a
             href="#how"
             class="nav-underline text-[var(--text-main)] hover:text-[var(--primary)] transition-colors whitespace-nowrap"
@@ -145,6 +145,18 @@
             </svg>
           </button>
           <button
+            id="btn-dashboard"
+            class="hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full min-w-[112px] text-sm font-bold text-white bg-[#4F46E5]/[0.95] hover:opacity-90 transition-all"
+          >
+            Dashboard
+          </button>
+          <button
+            id="btn-logout"
+            class="hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full min-w-[112px] text-sm font-bold text-[#3730A3] bg-white border-2 border-slate-200 hover:bg-slate-50 transition-all dark:bg-transparent dark:text-white dark:border-white/40 dark:hover:bg-white/10"
+          >
+            Logout
+          </button>
+          <button
             id="btn-login"
             class="hidden sm:inline-flex items-center justify-center gap-2 px-[30px] py-[10px] rounded-full min-w-[112px] text-sm font-bold text-white bg-gradient-to-r from-[#8C5FE2] to-[#E57CE1] hover:opacity-90 transition-all dark:hover:opacity-80"
           >
@@ -176,11 +188,11 @@
             class="px-6 py-3 text-black dark:text-white hover:bg-slate-100 dark:hover:bg-white/5 nav-underline"
             >Home</a
           >
-          <a
+          <!-- <a
             href="find-mentors.html"
             class="px-6 py-3 text-black dark:text-white hover:bg-slate-100 dark:hover:bg-white/5 nav-underline"
             >Find Mentors</a
-          >
+          > -->
           <a
             href="#how"
             class="px-6 py-3 text-black dark:text-white hover:bg-slate-100 dark:hover:bg-white/5 nav-underline"
@@ -195,6 +207,18 @@
         <div
           class="flex gap-3 p-4 border-t border-slate-200 dark:border-slate-700"
         >
+          <button
+            id="btn-dashboard-mob"
+            class="hidden flex-1 py-[12px] rounded-full text-sm font-bold text-white bg-[#4F46E5]/[0.95] hover:opacity-90 transition-all"
+          >
+            Dashboard
+          </button>
+          <button
+            id="btn-logout-mob"
+            class="hidden flex-1 py-2.5 rounded-full text-sm font-bold text-[#3730A3] bg-white border-2 border-slate-200 hover:bg-slate-50 transition-all dark:bg-transparent dark:text-white dark:border-white/40 dark:hover:bg-white/10"
+          >
+            Logout
+          </button>
           <button
             id="btn-login-mob"
             class="flex-1 py-[12px] rounded-full text-sm font-bold text-white bg-gradient-to-r from-[#8C5FE2] to-[#E57CE1] hover:opacity-90 transition-all dark:hover:opacity-80"
@@ -3761,7 +3785,7 @@
           </div>
           <div class="footer-col">
             <h3 class="footer-col-title">Services</h3>
-            <a href="find-mentors.html">Find Mentors</a>
+            <!-- <a href="find-mentors.html">Find Mentors</a> -->
             <a href="index.html#meeting-types">Meeting Types</a>
             <a href="#programs-disciplines">Programs Offered</a>
             <a href="#programs-disciplines">Professional Disciplines</a>

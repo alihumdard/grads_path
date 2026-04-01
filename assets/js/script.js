@@ -41,6 +41,80 @@
     if (signupModal) signupModal.classList.add("hidden");
   }
 
+  function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length === 2) return parts.pop().split(";").shift();
+    return null;
+  }
+
+  function isSignedIn() {
+    // Show dashboard/logout when saved state indicates signed in.
+    // Prefer cookie, with localStorage fallback (e.g., file:// and cookie-disabled browsers).
+    var cookieSignedIn = getCookie("gradspaths_signed_in") === "1";
+    var storageSignedIn = localStorage.getItem("gradpaths_signed_in") === "1";
+    return cookieSignedIn || storageSignedIn;
+  }
+
+  function signOut() {
+    localStorage.removeItem("gradpaths_signed_in");
+    localStorage.removeItem("gradspaths_remember");
+    localStorage.removeItem("gradspaths_remember_email");
+    document.cookie = "gradspaths_signed_in=; path=/; max-age=0; SameSite=Strict";
+    document.cookie = "gradspaths_user_email=; path=/; max-age=0; SameSite=Strict";
+    updateAuthButtons();
+    if (window.gradpathsUpdateContactSection) window.gradpathsUpdateContactSection();
+  }
+
+  function setBtnVisibility(el, show, mobile) {
+    if (!el) return;
+    if (show) {
+      el.classList.remove("hidden");
+      el.style.display = mobile ? "block" : "inline-flex";
+    } else {
+      el.classList.add("hidden");
+      el.style.display = "none";
+    }
+  }
+
+  function updateAuthButtons() {
+    var signedIn = isSignedIn();
+    var loginBtn = document.getElementById("btn-login");
+    var signupBtn = document.getElementById("btn-signup");
+    var loginBtnMob = document.getElementById("btn-login-mob");
+    var signupBtnMob = document.getElementById("btn-signup-mob");
+    var dashboardBtn = document.getElementById("btn-dashboard");
+    var logoutBtn = document.getElementById("btn-logout");
+    var dashboardBtnMob = document.getElementById("btn-dashboard-mob");
+    var logoutBtnMob = document.getElementById("btn-logout-mob");
+
+    if (signedIn) {
+
+      setBtnVisibility(loginBtn, false, false);
+      setBtnVisibility(signupBtn, false, false);
+      setBtnVisibility(loginBtnMob, false, true);
+      setBtnVisibility(signupBtnMob, false, true);
+      setBtnVisibility(dashboardBtn, true, false);
+      setBtnVisibility(logoutBtn, true, false);
+      setBtnVisibility(dashboardBtnMob, true, true);
+      setBtnVisibility(logoutBtnMob, true, true);
+    } else {
+      setBtnVisibility(loginBtn, true, false);
+      setBtnVisibility(signupBtn, true, false);
+      setBtnVisibility(loginBtnMob, true, true);
+      setBtnVisibility(signupBtnMob, true, true);
+      setBtnVisibility(dashboardBtn, false, false);
+      setBtnVisibility(logoutBtn, false, false);
+      setBtnVisibility(dashboardBtnMob, false, true);
+      setBtnVisibility(logoutBtnMob, false, true);
+    }
+    if (window.gradpathsUpdateContactSection) window.gradpathsUpdateContactSection();
+  }
+
+  window.gradpathsUpdateAuthButtons = updateAuthButtons;
+  window.gradpathsSignOut = signOut;
+  window.dispatchEvent(new Event("gradpathsUpdateAuthButtonsReady"));
+
   ["btn-login", "btn-login-mob"].forEach(function (id) {
     var el = document.getElementById(id);
     if (el) el.addEventListener("click", openLogin);
@@ -49,6 +123,25 @@
     var el = document.getElementById(id);
     if (el) el.addEventListener("click", openSignup);
   });
+
+  var dashboardBtn = document.getElementById("btn-dashboard");
+  var dashboardBtnMob = document.getElementById("btn-dashboard-mob");
+  var logoutBtn = document.getElementById("btn-logout");
+  var logoutBtnMob = document.getElementById("btn-logout-mob");
+
+  if (dashboardBtn) {
+    dashboardBtn.addEventListener("click", function () {
+      window.location.href = "https://gradspath-dashboard.vercel.app";
+    });
+  }
+  if (dashboardBtnMob) {
+    dashboardBtnMob.addEventListener("click", function () {
+      window.location.href = "https://gradspath-dashboard.vercel.app";
+    });
+  }
+  if (logoutBtn) logoutBtn.addEventListener("click", signOut);
+  if (logoutBtnMob) logoutBtnMob.addEventListener("click", signOut);
+
   var footerSignup = document.getElementById("footer-signup");
   var footerLogin = document.getElementById("footer-login");
   if (footerSignup) footerSignup.addEventListener("click", function (e) { e.preventDefault(); openSignup(); });
@@ -145,7 +238,7 @@
 
   // Contact Us: show form only when signed in, else show sign-in prompt
   function updateContactSection() {
-    var signedIn = localStorage.getItem("gradpaths_signed_in") === "1";
+    var signedIn = isSignedIn();
     var signinRequired = document.getElementById("contact-signin-required");
     var formWrapper = document.getElementById("contact-form-wrapper");
     if (signinRequired && formWrapper) {
@@ -171,10 +264,12 @@
   var btnSeeFeedback = document.getElementById("btn-see-feedback");
   if (btnSeeFeedback) {
     btnSeeFeedback.addEventListener("click", function (e) {
-      if (localStorage.getItem("gradpaths_signed_in") !== "1") {
+      if (!isSignedIn()) {
         e.preventDefault();
         openLogin();
       }
     });
   }
+
+  if (window.gradpathsUpdateAuthButtons) window.gradpathsUpdateAuthButtons();
 })();
