@@ -299,5 +299,16 @@
     });
   }
 
+  // Handle Select Your Mentor button clicks: if signed in, go to dashboard; else open login
+  function handleSelectMentorClick(e) {
+    e.preventDefault();
+    if (isSignedIn()) {
+      window.location.href = "https://gradspath-dashboard.vercel.app";
+    } else {
+      openLogin();
+    }
+  }
+  window.gradpathsHandleSelectMentor = handleSelectMentorClick;
+
   if (window.gradpathsUpdateAuthButtons) window.gradpathsUpdateAuthButtons();
 })();
