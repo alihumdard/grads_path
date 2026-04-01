@@ -87,7 +87,7 @@
     var logoutBtn = document.getElementById("btn-logout");
     var dashboardBtnMob = document.getElementById("btn-dashboard-mob");
     var logoutBtnMob = document.getElementById("btn-logout-mob");
-    var footerFindMentors = document.getElementById("footer-find-mentors");
+    var footerFindMentors = null;
     var footerSignup = document.getElementById("footer-signup");
     var footerLogin = document.getElementById("footer-login");
 
