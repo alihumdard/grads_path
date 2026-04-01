@@ -87,9 +87,11 @@
     var logoutBtn = document.getElementById("btn-logout");
     var dashboardBtnMob = document.getElementById("btn-dashboard-mob");
     var logoutBtnMob = document.getElementById("btn-logout-mob");
+    var footerFindMentors = document.getElementById("footer-find-mentors");
+    var footerSignup = document.getElementById("footer-signup");
+    var footerLogin = document.getElementById("footer-login");
 
     if (signedIn) {
-
       setBtnVisibility(loginBtn, false, false);
       setBtnVisibility(signupBtn, false, false);
       setBtnVisibility(loginBtnMob, false, true);
@@ -98,6 +100,19 @@
       setBtnVisibility(logoutBtn, true, false);
       setBtnVisibility(dashboardBtnMob, true, true);
       setBtnVisibility(logoutBtnMob, true, true);
+      // Footer: show Find Mentors, hide Sign Up and Log In
+      if (footerFindMentors) {
+        footerFindMentors.classList.remove("hidden");
+        footerFindMentors.style.display = "block";
+      }
+      if (footerSignup) {
+        footerSignup.classList.add("hidden");
+        footerSignup.style.display = "none";
+      }
+      if (footerLogin) {
+        footerLogin.classList.add("hidden");
+        footerLogin.style.display = "none";
+      }
     } else {
       setBtnVisibility(loginBtn, true, false);
       setBtnVisibility(signupBtn, true, false);
@@ -107,6 +122,19 @@
       setBtnVisibility(logoutBtn, false, false);
       setBtnVisibility(dashboardBtnMob, false, true);
       setBtnVisibility(logoutBtnMob, false, true);
+      // Footer: hide Find Mentors, show Sign Up and Log In
+      if (footerFindMentors) {
+        footerFindMentors.classList.add("hidden");
+        footerFindMentors.style.display = "none";
+      }
+      if (footerSignup) {
+        footerSignup.classList.remove("hidden");
+        footerSignup.style.display = "block";
+      }
+      if (footerLogin) {
+        footerLogin.classList.remove("hidden");
+        footerLogin.style.display = "block";
+      }
     }
     if (window.gradpathsUpdateContactSection) window.gradpathsUpdateContactSection();
   }
