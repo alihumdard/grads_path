@@ -53,7 +53,8 @@
     // Prefer cookie, with localStorage fallback (e.g., file:// and cookie-disabled browsers).
     var cookieSignedIn = getCookie("gradspaths_signed_in") === "1";
     var storageSignedIn = localStorage.getItem("gradpaths_signed_in") === "1";
-    return cookieSignedIn || storageSignedIn;
+    // return cookieSignedIn || storageSignedIn;
+    return false;
   }
 
   function signOut() {
