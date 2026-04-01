@@ -53,7 +53,8 @@
     // Prefer cookie, with localStorage fallback (e.g., file:// and cookie-disabled browsers).
     var cookieSignedIn = getCookie("gradspaths_signed_in") === "1";
     var storageSignedIn = localStorage.getItem("gradpaths_signed_in") === "1";
-    return cookieSignedIn || storageSignedIn;
+    // return cookieSignedIn || storageSignedIn;
+    return false;
   }
 
   function signOut() {
@@ -87,7 +88,7 @@
     var logoutBtn = document.getElementById("btn-logout");
     var dashboardBtnMob = document.getElementById("btn-dashboard-mob");
     var logoutBtnMob = document.getElementById("btn-logout-mob");
-    var footerFindMentors = document.getElementById("footer-find-mentors");
+    var footerFindMentors = null;
     var footerSignup = document.getElementById("footer-signup");
     var footerLogin = document.getElementById("footer-login");
 
