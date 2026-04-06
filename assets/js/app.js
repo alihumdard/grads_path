@@ -161,10 +161,23 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem("gradspaths_remember_email");
       }
       localStorage.setItem("gradpaths_signed_in", "1");
+      if (loginEmail) {
+        document.cookie = `gradspaths_signed_in=1; path=/; max-age=${60 * 60 * 24 * 30}; SameSite=Strict`; // 30 days
+        document.cookie = `gradspaths_user_email=${encodeURIComponent(loginEmail.value)}; path=/; max-age=${60 * 60 * 24 * 30}; SameSite=Strict`;
+      }
       const loginModal = document.getElementById("login-modal");
       if (loginModal) loginModal.classList.add("hidden");
-      if (typeof window.gradpathsUpdateContactSection === "function") {
-        window.gradpathsUpdateContactSection();
+      // Update UI state without redirect
+      if (window.gradpathsUpdateAuthButtons) {
+        window.gradpathsUpdateAuthButtons();
+      } else {
+        window.addEventListener(
+          "gradpathsUpdateAuthButtonsReady",
+          function () {
+            if (window.gradpathsUpdateAuthButtons) window.gradpathsUpdateAuthButtons();
+          },
+          { once: true }
+        );
       }
       // Backend would handle actual login here
     });
@@ -180,7 +193,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   if (signupEmail && localStorage.getItem("gradspaths_signup_email")) {
     signupEmail.value = localStorage.getItem("gradspaths_signup_email");
+
   }
+
   if (
     signupInstitution &&
     localStorage.getItem("gradspaths_signup_institution")
@@ -189,8 +204,10 @@ document.addEventListener("DOMContentLoaded", () => {
       "gradspaths_signup_institution",
     );
   }
+
   const savedLevel = localStorage.getItem("gradspaths_signup_level");
   const savedRole = localStorage.getItem("gradspaths_signup_role");
+
   if (savedLevel) {
     const levelBtn = document.querySelector(
       '.signup-level[data-value="' + savedLevel + '"]',
@@ -218,9 +235,103 @@ document.addEventListener("DOMContentLoaded", () => {
           "gradspaths_signup_institution",
           signupInstitution.value,
         );
+      localStorage.setItem("gradpaths_signed_in", "1");
+      if (signupEmail) {
+        document.cookie = `gradspaths_signed_in=1; path=/; max-age=${60 * 60 * 24 * 30}; SameSite=Strict`;
+        document.cookie = `gradspaths_user_email=${encodeURIComponent(signupEmail.value)}; path=/; max-age=${60 * 60 * 24 * 30}; SameSite=Strict`;
+      }
       const signupModal = document.getElementById("signup-modal");
       if (signupModal) signupModal.classList.add("hidden");
-      // Backend would handle actual signup here
+      // Update UI state without redirect
+      if (window.gradpathsUpdateAuthButtons) {
+        window.gradpathsUpdateAuthButtons();
+      } else {
+        window.addEventListener(
+          "gradpathsUpdateAuthButtonsReady",
+          function () {
+            if (window.gradpathsUpdateAuthButtons) window.gradpathsUpdateAuthButtons();
+          },
+          { once: true }
+        );
+      }
+    });
+  }
+
+  // Institution autocomplete functionality
+  let universitiesData = [];
+  const institutionInput = document.getElementById("signup-institution");
+  const suggestionsContainer = document.getElementById("institution-suggestions");
+
+  // Fetch universities from GitHub
+  async function fetchUniversities() {
+    try {
+      const response = await fetch("https://raw.githubusercontent.com/Hipo/university-domains-list/refs/heads/master/world_universities_and_domains.json");
+      if (response.ok) {
+        universitiesData = await response.json();
+      }
+    } catch (error) {
+      console.log("Could not fetch universities list:", error);
+    }
+  }
+
+  // Initialize universities data
+  fetchUniversities();
+
+  // Filter and display suggestions
+  function showSuggestions(query) {
+    if (!query || query.length < 2) {
+      suggestionsContainer.classList.add("hidden");
+      return;
+    }
+
+    const filtered = universitiesData.filter((uni) =>
+      uni.name.toLowerCase().includes(query.toLowerCase())
+    ).slice(0, 10); // Show max 10 suggestions
+
+    if (filtered.length === 0) {
+      suggestionsContainer.innerHTML = '<div class="p-3 text-sm text-[#6D28D9]">No universities found</div>';
+      suggestionsContainer.classList.remove("hidden");
+      return;
+    }
+
+    suggestionsContainer.innerHTML = filtered
+      .map((uni) => `
+        <div class="p-3 cursor-pointer hover:bg-[#f5efff] border-b border-[#E9D5FF] last:border-b-0 text-sm text-[#6D28D9]">
+          <div class="font-semibold">${uni.name}</div>
+          <div class="text-xs text-[#9A7FD9]">${uni.country}${uni["state-province"] ? ", " + uni["state-province"] : ""}</div>
+        </div>
+      `)
+      .join("");
+
+    suggestionsContainer.classList.remove("hidden");
+
+    // Add click handlers to suggestions
+    document.querySelectorAll("#institution-suggestions > div").forEach((el, index) => {
+      el.addEventListener("click", () => {
+        institutionInput.value = filtered[index].name;
+        suggestionsContainer.classList.add("hidden");
+      });
+    });
+  }
+
+  // Input event listener
+  if (institutionInput) {
+    institutionInput.addEventListener("input", (e) => {
+      showSuggestions(e.target.value);
+    });
+
+    // Hide suggestions when clicking outside
+    document.addEventListener("click", (e) => {
+      if (e.target !== institutionInput && !suggestionsContainer.contains(e.target)) {
+        suggestionsContainer.classList.add("hidden");
+      }
+    });
+
+    // Show suggestions on focus if there's a value
+    institutionInput.addEventListener("focus", () => {
+      if (institutionInput.value.length >= 2) {
+        showSuggestions(institutionInput.value);
+      }
     });
   }
 });
