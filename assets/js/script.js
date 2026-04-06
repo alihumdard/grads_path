@@ -104,11 +104,11 @@
   document.querySelectorAll(".signup-level").forEach(function (btn) {
     btn.addEventListener("click", function () {
       document.querySelectorAll(".signup-level").forEach(function (b) {
-        b.classList.remove("border-[var(--primary)]", "text-[var(--primary)]", "bg-[var(--primary)]/10");
-        b.classList.add("border-[var(--border)]", "text-[var(--text-muted)]");
+        b.classList.remove("border-[#6D28D9]", "bg-[#EBE0F8]");
+        b.classList.add("border-[#D8B4FE]", "bg-white", "hover:border-[#6D28D9]");
       });
-      btn.classList.add("border-[var(--primary)]", "text-[var(--primary)]", "bg-[var(--primary)]/10");
-      btn.classList.remove("border-[var(--border)]", "text-[var(--text-muted)]");
+      btn.classList.add("border-[#6D28D9]", "bg-[#EBE0F8]");
+      btn.classList.remove("border-[#D8B4FE]", "bg-white", "hover:border-[#6D28D9]");
       var val = btn.getAttribute("data-value");
       if (val)
         try {
@@ -119,9 +119,11 @@
   document.querySelectorAll(".signup-role").forEach(function (btn) {
     btn.addEventListener("click", function () {
       document.querySelectorAll(".signup-role").forEach(function (b) {
-        b.classList.remove("selected");
+        b.classList.remove("border-[#6D28D9]", "bg-[#EBE0F8]");
+        b.classList.add("border-[#D8B4FE]", "bg-white", "hover:border-[#6D28D9]");
       });
-      btn.classList.add("selected");
+      btn.classList.add("border-[#6D28D9]", "bg-[#EBE0F8]");
+      btn.classList.remove("border-[#D8B4FE]", "bg-white", "hover:border-[#6D28D9]");
       var val = btn.getAttribute("data-value");
       if (val)
         try {
@@ -129,14 +131,18 @@
         } catch (e) {}
       var stepsEl = document.getElementById("signup-steps");
       var subtitleEl = document.getElementById("signup-subtitle");
-      if (stepsEl && subtitleEl) {
+      if (subtitleEl) {
         if (val === "Mentor") {
-          stepsEl.classList.remove("hidden");
-          stepsEl.setAttribute("aria-hidden", "false");
+          if (stepsEl) {
+            stepsEl.classList.remove("hidden");
+            stepsEl.setAttribute("aria-hidden", "false");
+          }
           subtitleEl.textContent = "Begin helping students achieve their dreams.";
         } else {
-          stepsEl.classList.add("hidden");
-          stepsEl.setAttribute("aria-hidden", "true");
+          if (stepsEl) {
+            stepsEl.classList.add("hidden");
+            stepsEl.setAttribute("aria-hidden", "true");
+          }
           subtitleEl.textContent = "Tell us who you are so we can verify your school and keep this community secure.";
         }
       }
